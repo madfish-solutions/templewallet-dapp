@@ -1,11 +1,18 @@
 {
   "name": "@thanos-wallet/dapp",
+  "author": {
+    "name": "Madfish Solutions",
+    "email": "info@madfish.solutions"
+  },
   "version": "0.2.0",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
   "unpkg": "dist/index.umd.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/madfish-solutions/thanoswallet-dapp"
+  },
   "scripts": {
     "build": "microbundle build",
     "dev": "microbundle watch"
