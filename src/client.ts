@@ -144,12 +144,6 @@ export class ThanosWalletError implements Error {
   message = "An unknown error occured. Please try again or report it";
 }
 
-export class NotConnectedThanosWalletError extends ThanosWalletError {
-  name = "ThanosWalletNotConnected";
-  message =
-    "You need to connect ThanosWallet by calling thanosWallet.connect() first";
-}
-
 export class NotGrantedThanosWalletError extends ThanosWalletError {
   name = "NotGrantedThanosWalletError";
   message = "Permission Not Granted";
