@@ -10,12 +10,15 @@
   "module": "dist/index.module.js",
   "unpkg": "dist/index.umd.js",
   "types": "dist/index.d.ts",
+  "private": false,
+  "license": "MIT",
   "repository": {
     "url": "https://github.com/madfish-solutions/thanoswallet-dapp"
   },
   "scripts": {
     "build": "microbundle build",
-    "dev": "microbundle watch"
+    "dev": "microbundle watch",
+    "release": "npm publish"
   },
   "dependencies": {
     "nanoid": "^3.1.9"
