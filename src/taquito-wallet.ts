@@ -84,7 +84,7 @@ function assertConnected(pkh?: string): asserts pkh {
   }
 }
 
-function formatOpParams<T extends any>(op: T) {
+function formatOpParams(op: any) {
   const { fee, gas_limit, storage_limit, ...rest } = op;
   if (op.kind === "transaction") {
     const { destination, amount, ...txRest } = rest;
