@@ -1,0 +1,20 @@
+{
+  "name": "@thanos-wallet/dapp",
+  "version": "0.0.1",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "microbundle build",
+    "dev": "microbundle watch"
+  },
+  "dependencies": {
+    "nanoid": "^3.1.9"
+  },
+  "devDependencies": {
+    "microbundle": "^0.12.0",
+    "typescript": "^3.9.3"
+  }
+}
