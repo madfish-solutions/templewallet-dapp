@@ -16,7 +16,7 @@
     "url": "https://github.com/madfish-solutions/thanoswallet-dapp"
   },
   "scripts": {
-    "build": "microbundle build",
+    "build": "tsc --module commonjs && microbundle build",
     "dev": "microbundle watch",
     "release": "npm publish"
   },
