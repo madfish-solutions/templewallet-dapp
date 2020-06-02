@@ -114,14 +114,14 @@ function request(payload: ThanosDAppRequest) {
 }
 
 function createError(payload: any) {
-  switch (payload) {
-    case ThanosDAppErrorType.NotGranted:
+  switch (true) {
+    case payload === ThanosDAppErrorType.NotGranted:
       return new NotGrantedThanosWalletError();
 
-    case ThanosDAppErrorType.NotFound:
+    case payload === ThanosDAppErrorType.NotFound:
       return new NotFoundThanosWalletError();
 
-    case ThanosDAppErrorType.InvalidParams:
+    case payload === ThanosDAppErrorType.InvalidParams:
       return new InvalidParamsThanosWalletError();
 
     case payload?.startsWith("__tezos__"):
