@@ -124,6 +124,9 @@ function createError(payload: any) {
     case ThanosDAppErrorType.InvalidParams:
       return new InvalidParamsThanosWalletError();
 
+    case payload?.startsWith("__tezos__"):
+      return new Error(payload.replace("__tezos__", ""));
+
     default:
       return new ThanosWalletError();
   }
