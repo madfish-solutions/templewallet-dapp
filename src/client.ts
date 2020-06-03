@@ -33,7 +33,7 @@ export function isAvailable() {
       payload: "PING",
     });
     window.addEventListener("message", handleMessage);
-    const t = setTimeout(() => done(false), 100);
+    const t = setTimeout(() => done(false), 500);
   });
 }
 
@@ -49,7 +49,7 @@ export function onAvailabilityChange(callback: (available: boolean) => void) {
     }
     t = setTimeout(
       check,
-      available ? 10_000 : !initial ? 5_000 : 250,
+      available ? 10_000 : !initial ? 5_000 : 0,
       initial ? attempt + 1 : attempt
     );
   };
