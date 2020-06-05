@@ -23,6 +23,7 @@
   "scripts": {
     "build": "tsc --module commonjs && microbundle build",
     "dev": "microbundle watch",
+    "prerelease": "npm run build",
     "release": "npm publish",
     "doc": "typedoc --plugin typedoc-plugin-markdown --mode file --readme none"
   },
