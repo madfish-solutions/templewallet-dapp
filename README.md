@@ -47,7 +47,9 @@ import { ThanosWallet } from "@thanos-wallet/dapp";
 
 ## API
 
-You can explore auto generated [API Docs here](docs/README.md).
+You can explore auto generated [full API Docs here](docs/README.md).
+
+Probably you would be most interested in the following [ThanosWallet class](docs/classes/thanoswallet.md) methods.
 
 ## Local Development
 
