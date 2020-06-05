@@ -13,12 +13,18 @@
   "private": false,
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/madfish-solutions/thanoswallet-dapp"
+    "type": "git",
+    "url": "git+https://github.com/madfish-solutions/thanoswallet-dapp.git"
   },
+  "bugs": {
+    "url": "https://github.com/madfish-solutions/thanoswallet-dapp/issues"
+  },
+  "homepage": "https://github.com/madfish-solutions/thanoswallet-dapp#readme",
   "scripts": {
     "build": "tsc --module commonjs && microbundle build",
     "dev": "microbundle watch",
-    "release": "npm publish"
+    "release": "npm publish",
+    "doc": "typedoc --plugin typedoc-plugin-markdown --mode file --readme none"
   },
   "dependencies": {
     "nanoid": "^3.1.9"
@@ -26,6 +32,8 @@
   "devDependencies": {
     "@taquito/taquito": "^6.3.0-wallet.3",
     "microbundle": "^0.12.0",
+    "typedoc": "^0.17.7",
+    "typedoc-plugin-markdown": "^2.3.1",
     "typescript": "^3.9.3"
   },
   "peerDependencies": {
