@@ -4,13 +4,13 @@ This module is required to provide communication between DApps and Thanos Wallet
 
 ## 🚀 Quick Start
 
-### 1) Install
+### Install
 
 ```bash
 yarn add @taquito/taquito@^6.3.0-wallet.3 @thanos-wallet/dapp
 ```
 
-### 1) Usage
+### Usage
 
 ```typescript
 import { ThanosWallet } from "@thanos-wallet/dapp";
@@ -44,6 +44,9 @@ import { ThanosWallet } from "@thanos-wallet/dapp";
   }
 })();
 ```
+
+### Demo
+You can find the example of Counter DApp in [this repo](https://github.com/madfish-solutions/counter-dapp).
 
 ## API
 
