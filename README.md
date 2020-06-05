@@ -49,7 +49,7 @@ import { ThanosWallet } from "@thanos-wallet/dapp";
 
 You can explore auto generated [full API Docs here](docs/README.md).
 
-Probably you would be most interested in the following [ThanosWallet class](docs/classes/thanoswallet.md) methods.
+Probably you would be most interested in the [ThanosWallet class](docs/classes/thanoswallet.md) methods.
 
 ## Local Development
 
