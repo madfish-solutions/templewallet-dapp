@@ -60,7 +60,11 @@ export enum ThanosDAppErrorType {
  * Misc
  */
 
-export type ThanosDAppNetwork = "mainnet" | "carthagenet";
+export type ThanosDAppNetwork =
+  | "mainnet"
+  | "carthagenet"
+  | "labnet"
+  | "sandbox";
 
 export interface ThanosDAppMetadata {
   name: string;
