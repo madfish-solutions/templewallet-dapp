@@ -28,16 +28,16 @@
     "doc": "typedoc --plugin typedoc-plugin-markdown --mode file --readme none"
   },
   "dependencies": {
-    "nanoid": "^3.1.9"
+    "nanoid": "^3.1.10"
   },
   "devDependencies": {
-    "@taquito/taquito": "^6.3.0-wallet.3",
-    "microbundle": "^0.12.0",
-    "typedoc": "^0.17.7",
+    "@taquito/taquito": "^6.3.2-beta.0",
+    "microbundle": "^0.12.2",
+    "typedoc": "^0.17.8",
     "typedoc-plugin-markdown": "^2.3.1",
-    "typescript": "^3.9.3"
+    "typescript": "^3.9.6"
   },
   "peerDependencies": {
-    "@taquito/taquito": "^6.3.0-wallet.3"
+    "@taquito/taquito": "^6.3.2-beta.0"
   }
 }
