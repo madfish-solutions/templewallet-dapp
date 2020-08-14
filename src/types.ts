@@ -64,7 +64,8 @@ export type ThanosDAppNetwork =
   | "mainnet"
   | "carthagenet"
   | "labnet"
-  | "sandbox";
+  | "sandbox"
+  | { name: string; rpc: string };
 
 export interface ThanosDAppMetadata {
   name: string;
