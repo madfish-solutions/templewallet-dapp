@@ -82,6 +82,25 @@ export async function requestOperation(sourcePkh: string, opParams: any) {
   return res.opHash;
 }
 
+export async function requestSign(sourcePkh: string, payload: string) {
+  const res = await request({
+    type: ThanosDAppMessageType.SignRequest,
+    sourcePkh,
+    payload,
+  });
+  assertResponse(res.type === ThanosDAppMessageType.SignResponse);
+  return res.signature;
+}
+
+export async function requestBroadcast(signedOpBytes: string) {
+  const res = await request({
+    type: ThanosDAppMessageType.BroadcastRequest,
+    signedOpBytes,
+  });
+  assertResponse(res.type === ThanosDAppMessageType.BroadcastResponse);
+  return res.opHash;
+}
+
 function request(payload: ThanosDAppRequest) {
   return new Promise<ThanosDAppResponse>((resolve, reject) => {
     const reqId = nanoid();
