@@ -2,11 +2,15 @@ export type ThanosDAppMessage = ThanosDAppRequest | ThanosDAppResponse;
 
 export type ThanosDAppRequest =
   | ThanosDAppPermissionRequest
-  | ThanosDAppOperationRequest;
+  | ThanosDAppOperationRequest
+  | ThanosDAppSignRequest
+  | ThanosDAppBroadcastRequest;
 
 export type ThanosDAppResponse =
   | ThanosDAppPermissionResponse
-  | ThanosDAppOperationResponse;
+  | ThanosDAppOperationResponse
+  | ThanosDAppSignResponse
+  | ThanosDAppBroadcastResponse;
 
 export interface ThanosDAppMessageBase {
   type: ThanosDAppMessageType;
@@ -17,6 +21,10 @@ export enum ThanosDAppMessageType {
   PermissionResponse = "PERMISSION_RESPONSE",
   OperationRequest = "OPERATION_REQUEST",
   OperationResponse = "OPERATION_RESPONSE",
+  SignRequest = "SIGN_REQUEST",
+  SignResponse = "SIGN_RESPONSE",
+  BroadcastRequest = "BROADCAST_REQUEST",
+  BroadcastResponse = "BROADCAST_RESPONSE",
 }
 
 /**
@@ -44,6 +52,27 @@ export interface ThanosDAppOperationRequest extends ThanosDAppMessageBase {
 
 export interface ThanosDAppOperationResponse extends ThanosDAppMessageBase {
   type: ThanosDAppMessageType.OperationResponse;
+  opHash: string;
+}
+
+export interface ThanosDAppSignRequest extends ThanosDAppMessageBase {
+  type: ThanosDAppMessageType.SignRequest;
+  sourcePkh: string;
+  payload: string;
+}
+
+export interface ThanosDAppSignResponse extends ThanosDAppMessageBase {
+  type: ThanosDAppMessageType.SignResponse;
+  signature: string;
+}
+
+export interface ThanosDAppBroadcastRequest extends ThanosDAppMessageBase {
+  type: ThanosDAppMessageType.BroadcastRequest;
+  signedOpBytes: string;
+}
+
+export interface ThanosDAppBroadcastResponse extends ThanosDAppMessageBase {
+  type: ThanosDAppMessageType.BroadcastResponse;
   opHash: string;
 }
 

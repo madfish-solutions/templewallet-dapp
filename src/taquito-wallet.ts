@@ -14,6 +14,8 @@ import {
   onAvailabilityChange,
   requestPermission,
   requestOperation,
+  requestSign,
+  requestBroadcast,
   ThanosWalletError,
 } from "./client";
 
@@ -69,6 +71,16 @@ export class ThanosWallet implements WalletProvider {
   async sendOperations(opParams: any[]) {
     assertConnected(this.pkh);
     return requestOperation(this.pkh, opParams.map(formatOpParams));
+  }
+
+  async sign(payload: string) {
+    assertConnected(this.pkh);
+    return requestSign(this.pkh, payload);
+  }
+
+  async broadcast(signedOpBytes: string) {
+    assertConnected(this.pkh);
+    return requestBroadcast(signedOpBytes);
   }
 }
 
