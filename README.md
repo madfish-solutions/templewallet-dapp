@@ -7,7 +7,7 @@ This module is required to provide communication between DApps and Thanos Wallet
 ### Install
 
 ```bash
-yarn add @taquito/taquito@^6.3.0-wallet.3 @thanos-wallet/dapp
+yarn add @taquito/taquito @thanos-wallet/dapp
 ```
 
 ### Usage
@@ -21,6 +21,13 @@ import { ThanosWallet } from "@thanos-wallet/dapp";
     if (!available) {
       throw new Error("Thanos Wallet not installed");
     }
+
+    // Note:
+
+    // use `ThanosWallet.isAvailable` method only after web application fully loaded.
+
+    // Alternatively, you can use the method `ThanosWallet.onAvailabilityChange`
+    // that tracks availability in real-time .
 
     const wallet = new ThanosWallet("My Super DApp");
     await wallet.connect("carthagenet");
