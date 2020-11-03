@@ -36,8 +36,8 @@ export class ThanosWallet implements WalletProvider {
 
   toTezos() {
     assertConnected(this.pkh);
-    const tezos = new TezosToolkit();
-    tezos.setProvider({ wallet: this, rpc: this.rpc });
+    const tezos = new TezosToolkit(this.rpc!);
+    tezos.setProvider({ wallet: this });
     return tezos;
   }
 
