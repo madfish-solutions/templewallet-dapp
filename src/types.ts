@@ -91,8 +91,8 @@ export enum ThanosDAppErrorType {
 
 export type ThanosDAppNetwork =
   | "mainnet"
+  | "delphinet"
   | "carthagenet"
-  | "labnet"
   | "sandbox"
   | { name: string; rpc: string };
 
