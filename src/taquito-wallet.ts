@@ -122,5 +122,3 @@ function formatOpParams(op: any) {
   }
   return rest;
 }
-
-type NonNullable<T> = T extends null ? never : T;
