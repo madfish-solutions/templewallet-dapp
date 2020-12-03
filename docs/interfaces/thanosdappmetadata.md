@@ -18,4 +18,4 @@
 
 • **name**: *string*
 
-*Defined in [types.ts:66](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/types.ts#L66)*
+*Defined in [types.ts:120](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L120)*

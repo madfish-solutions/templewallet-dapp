@@ -21,18 +21,25 @@
 
 ### Interfaces
 
+* [ThanosDAppBroadcastRequest](interfaces/thanosdappbroadcastrequest.md)
+* [ThanosDAppBroadcastResponse](interfaces/thanosdappbroadcastresponse.md)
+* [ThanosDAppGetCurrentPermissionRequest](interfaces/thanosdappgetcurrentpermissionrequest.md)
+* [ThanosDAppGetCurrentPermissionResponse](interfaces/thanosdappgetcurrentpermissionresponse.md)
 * [ThanosDAppMessageBase](interfaces/thanosdappmessagebase.md)
 * [ThanosDAppMetadata](interfaces/thanosdappmetadata.md)
 * [ThanosDAppOperationRequest](interfaces/thanosdappoperationrequest.md)
 * [ThanosDAppOperationResponse](interfaces/thanosdappoperationresponse.md)
 * [ThanosDAppPermissionRequest](interfaces/thanosdapppermissionrequest.md)
 * [ThanosDAppPermissionResponse](interfaces/thanosdapppermissionresponse.md)
+* [ThanosDAppSignRequest](interfaces/thanosdappsignrequest.md)
+* [ThanosDAppSignResponse](interfaces/thanosdappsignresponse.md)
 * [ThanosPageMessage](interfaces/thanospagemessage.md)
 
 ### Type aliases
 
 * [ThanosDAppMessage](README.md#thanosdappmessage)
 * [ThanosDAppNetwork](README.md#thanosdappnetwork)
+* [ThanosDAppPermission](README.md#thanosdapppermission)
 * [ThanosDAppRequest](README.md#thanosdapprequest)
 * [ThanosDAppResponse](README.md#thanosdappresponse)
 
@@ -42,11 +49,16 @@
 * [assertResponse](README.md#assertresponse)
 * [createError](README.md#createerror)
 * [formatOpParams](README.md#formatopparams)
+* [getCurrentPermission](README.md#getcurrentpermission)
 * [isAvailable](README.md#isavailable)
 * [onAvailabilityChange](README.md#onavailabilitychange)
+* [onPermissionChange](README.md#onpermissionchange)
+* [permissionsAreEqual](README.md#permissionsareequal)
 * [request](README.md#request)
+* [requestBroadcast](README.md#requestbroadcast)
 * [requestOperation](README.md#requestoperation)
 * [requestPermission](README.md#requestpermission)
+* [requestSign](README.md#requestsign)
 * [send](README.md#send)
 
 ## Type aliases
@@ -55,15 +67,23 @@
 
 Ƭ **ThanosDAppMessage**: *[ThanosDAppRequest](README.md#thanosdapprequest) | [ThanosDAppResponse](README.md#thanosdappresponse)*
 
-*Defined in [types.ts:1](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/types.ts#L1)*
+*Defined in [types.ts:1](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L1)*
 
 ___
 
 ###  ThanosDAppNetwork
 
-Ƭ **ThanosDAppNetwork**: *"mainnet" | "carthagenet"*
+Ƭ **ThanosDAppNetwork**: *"mainnet" | "delphinet" | "carthagenet" | "sandbox" | object*
 
-*Defined in [types.ts:63](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/types.ts#L63)*
+*Defined in [types.ts:112](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L112)*
+
+___
+
+###  ThanosDAppPermission
+
+Ƭ **ThanosDAppPermission**: *object | null*
+
+*Defined in [types.ts:107](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L107)*
 
 Misc
 
@@ -71,17 +91,17 @@ ___
 
 ###  ThanosDAppRequest
 
-Ƭ **ThanosDAppRequest**: *[ThanosDAppPermissionRequest](interfaces/thanosdapppermissionrequest.md) | [ThanosDAppOperationRequest](interfaces/thanosdappoperationrequest.md)*
+Ƭ **ThanosDAppRequest**: *[ThanosDAppGetCurrentPermissionRequest](interfaces/thanosdappgetcurrentpermissionrequest.md) | [ThanosDAppPermissionRequest](interfaces/thanosdapppermissionrequest.md) | [ThanosDAppOperationRequest](interfaces/thanosdappoperationrequest.md) | [ThanosDAppSignRequest](interfaces/thanosdappsignrequest.md) | [ThanosDAppBroadcastRequest](interfaces/thanosdappbroadcastrequest.md)*
 
-*Defined in [types.ts:3](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/types.ts#L3)*
+*Defined in [types.ts:3](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L3)*
 
 ___
 
 ###  ThanosDAppResponse
 
-Ƭ **ThanosDAppResponse**: *[ThanosDAppPermissionResponse](interfaces/thanosdapppermissionresponse.md) | [ThanosDAppOperationResponse](interfaces/thanosdappoperationresponse.md)*
+Ƭ **ThanosDAppResponse**: *[ThanosDAppGetCurrentPermissionResponse](interfaces/thanosdappgetcurrentpermissionresponse.md) | [ThanosDAppPermissionResponse](interfaces/thanosdapppermissionresponse.md) | [ThanosDAppOperationResponse](interfaces/thanosdappoperationresponse.md) | [ThanosDAppSignResponse](interfaces/thanosdappsignresponse.md) | [ThanosDAppBroadcastResponse](interfaces/thanosdappbroadcastresponse.md)*
 
-*Defined in [types.ts:7](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/types.ts#L7)*
+*Defined in [types.ts:10](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L10)*
 
 ## Functions
 
@@ -89,7 +109,7 @@ ___
 
 ▸ **assertConnected**(`pkh?`: undefined | string): *asserts pkh*
 
-*Defined in [taquito-wallet.ts:81](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/taquito-wallet.ts#L81)*
+*Defined in [taquito-wallet.ts:105](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/taquito-wallet.ts#L105)*
 
 **Parameters:**
 
@@ -105,7 +125,7 @@ ___
 
 ▸ **assertResponse**(`condition`: any): *asserts condition*
 
-*Defined in [client.ts:135](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/client.ts#L135)*
+*Defined in [client.ts:193](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/client.ts#L193)*
 
 **Parameters:**
 
@@ -121,7 +141,7 @@ ___
 
 ▸ **createError**(`payload`: any): *[ThanosWalletError](classes/thanoswalleterror.md)‹›*
 
-*Defined in [client.ts:116](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/client.ts#L116)*
+*Defined in [client.ts:174](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/client.ts#L174)*
 
 **Parameters:**
 
@@ -137,7 +157,7 @@ ___
 
 ▸ **formatOpParams**(`op`: any): *any*
 
-*Defined in [taquito-wallet.ts:87](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/taquito-wallet.ts#L87)*
+*Defined in [taquito-wallet.ts:111](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/taquito-wallet.ts#L111)*
 
 **Parameters:**
 
@@ -149,11 +169,21 @@ Name | Type |
 
 ___
 
+###  getCurrentPermission
+
+▸ **getCurrentPermission**(): *Promise‹null | object›*
+
+*Defined in [client.ts:81](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/client.ts#L81)*
+
+**Returns:** *Promise‹null | object›*
+
+___
+
 ###  isAvailable
 
 ▸ **isAvailable**(): *Promise‹boolean›*
 
-*Defined in [client.ts:13](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/client.ts#L13)*
+*Defined in [client.ts:14](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/client.ts#L14)*
 
 **Returns:** *Promise‹boolean›*
 
@@ -163,7 +193,7 @@ ___
 
 ▸ **onAvailabilityChange**(`callback`: function): *(Anonymous function)*
 
-*Defined in [client.ts:40](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/client.ts#L40)*
+*Defined in [client.ts:41](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/client.ts#L41)*
 
 **Parameters:**
 
@@ -181,11 +211,50 @@ Name | Type |
 
 ___
 
+###  onPermissionChange
+
+▸ **onPermissionChange**(`callback`: function): *(Anonymous function)*
+
+*Defined in [client.ts:61](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/client.ts#L61)*
+
+**Parameters:**
+
+▪ **callback**: *function*
+
+▸ (`permission`: [ThanosDAppPermission](README.md#thanosdapppermission)): *void*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`permission` | [ThanosDAppPermission](README.md#thanosdapppermission) |
+
+**Returns:** *(Anonymous function)*
+
+___
+
+###  permissionsAreEqual
+
+▸ **permissionsAreEqual**(`aPerm`: [ThanosDAppPermission](README.md#thanosdapppermission), `bPerm`: [ThanosDAppPermission](README.md#thanosdapppermission)): *boolean*
+
+*Defined in [client.ts:166](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/client.ts#L166)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`aPerm` | [ThanosDAppPermission](README.md#thanosdapppermission) |
+`bPerm` | [ThanosDAppPermission](README.md#thanosdapppermission) |
+
+**Returns:** *boolean*
+
+___
+
 ###  request
 
-▸ **request**(`payload`: [ThanosDAppRequest](README.md#thanosdapprequest)): *Promise‹[ThanosDAppPermissionResponse](interfaces/thanosdapppermissionresponse.md) | [ThanosDAppOperationResponse](interfaces/thanosdappoperationresponse.md)›*
+▸ **request**(`payload`: [ThanosDAppRequest](README.md#thanosdapprequest)): *Promise‹[ThanosDAppGetCurrentPermissionResponse](interfaces/thanosdappgetcurrentpermissionresponse.md) | [ThanosDAppPermissionResponse](interfaces/thanosdapppermissionresponse.md) | [ThanosDAppOperationResponse](interfaces/thanosdappoperationresponse.md) | [ThanosDAppSignResponse](interfaces/thanosdappsignresponse.md) | [ThanosDAppBroadcastResponse](interfaces/thanosdappbroadcastresponse.md)›*
 
-*Defined in [client.ts:85](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/client.ts#L85)*
+*Defined in [client.ts:135](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/client.ts#L135)*
 
 **Parameters:**
 
@@ -193,7 +262,23 @@ Name | Type |
 ------ | ------ |
 `payload` | [ThanosDAppRequest](README.md#thanosdapprequest) |
 
-**Returns:** *Promise‹[ThanosDAppPermissionResponse](interfaces/thanosdapppermissionresponse.md) | [ThanosDAppOperationResponse](interfaces/thanosdappoperationresponse.md)›*
+**Returns:** *Promise‹[ThanosDAppGetCurrentPermissionResponse](interfaces/thanosdappgetcurrentpermissionresponse.md) | [ThanosDAppPermissionResponse](interfaces/thanosdapppermissionresponse.md) | [ThanosDAppOperationResponse](interfaces/thanosdappoperationresponse.md) | [ThanosDAppSignResponse](interfaces/thanosdappsignresponse.md) | [ThanosDAppBroadcastResponse](interfaces/thanosdappbroadcastresponse.md)›*
+
+___
+
+###  requestBroadcast
+
+▸ **requestBroadcast**(`signedOpBytes`: string): *Promise‹string›*
+
+*Defined in [client.ts:126](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/client.ts#L126)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`signedOpBytes` | string |
+
+**Returns:** *Promise‹string›*
 
 ___
 
@@ -201,7 +286,7 @@ ___
 
 ▸ **requestOperation**(`sourcePkh`: string, `opParams`: any): *Promise‹string›*
 
-*Defined in [client.ts:75](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/client.ts#L75)*
+*Defined in [client.ts:106](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/client.ts#L106)*
 
 **Parameters:**
 
@@ -218,7 +303,7 @@ ___
 
 ▸ **requestPermission**(`network`: [ThanosDAppNetwork](README.md#thanosdappnetwork), `appMeta`: [ThanosDAppMetadata](interfaces/thanosdappmetadata.md), `force`: boolean): *Promise‹object›*
 
-*Defined in [client.ts:60](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/client.ts#L60)*
+*Defined in [client.ts:91](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/client.ts#L91)*
 
 **Parameters:**
 
@@ -232,11 +317,28 @@ Name | Type |
 
 ___
 
+###  requestSign
+
+▸ **requestSign**(`sourcePkh`: string, `payload`: string): *Promise‹string›*
+
+*Defined in [client.ts:116](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/client.ts#L116)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`sourcePkh` | string |
+`payload` | string |
+
+**Returns:** *Promise‹string›*
+
+___
+
 ###  send
 
 ▸ **send**(`msg`: [ThanosPageMessage](interfaces/thanospagemessage.md)): *void*
 
-*Defined in [client.ts:141](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/client.ts#L141)*
+*Defined in [client.ts:199](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/client.ts#L199)*
 
 **Parameters:**
 
