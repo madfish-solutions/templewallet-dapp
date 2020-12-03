@@ -68,6 +68,9 @@ import { ThanosWallet } from "@thanos-wallet/dapp";
     // Alternatively, you can use the method `ThanosWallet.onPermissionChange`
     // that tracks current permission in real-time.
 
+    console.info(permission);
+    // prints "{ pkh: string, rpc: string }" if permission exists, "null" - if not.
+
     const wallet = new ThanosWallet("My Super DApp", permission);
 
     console.info(wallet.connected);
