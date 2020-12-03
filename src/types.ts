@@ -1,12 +1,14 @@
 export type ThanosDAppMessage = ThanosDAppRequest | ThanosDAppResponse;
 
 export type ThanosDAppRequest =
+  | ThanosDAppGetCurrentPermissionRequest
   | ThanosDAppPermissionRequest
   | ThanosDAppOperationRequest
   | ThanosDAppSignRequest
   | ThanosDAppBroadcastRequest;
 
 export type ThanosDAppResponse =
+  | ThanosDAppGetCurrentPermissionResponse
   | ThanosDAppPermissionResponse
   | ThanosDAppOperationResponse
   | ThanosDAppSignResponse
@@ -17,6 +19,8 @@ export interface ThanosDAppMessageBase {
 }
 
 export enum ThanosDAppMessageType {
+  GetCurrentPermissionRequest = "GET_CURRENT_PERMISSION_REQUEST",
+  GetCurrentPermissionResponse = "GET_CURRENT_PERMISSION_RESPONSE",
   PermissionRequest = "PERMISSION_REQUEST",
   PermissionResponse = "PERMISSION_RESPONSE",
   OperationRequest = "OPERATION_REQUEST",
@@ -30,6 +34,17 @@ export enum ThanosDAppMessageType {
 /**
  * Messages
  */
+
+export interface ThanosDAppGetCurrentPermissionRequest
+  extends ThanosDAppMessageBase {
+  type: ThanosDAppMessageType.GetCurrentPermissionRequest;
+}
+
+export interface ThanosDAppGetCurrentPermissionResponse
+  extends ThanosDAppMessageBase {
+  type: ThanosDAppMessageType.GetCurrentPermissionResponse;
+  permission: ThanosDAppPermission;
+}
 
 export interface ThanosDAppPermissionRequest extends ThanosDAppMessageBase {
   type: ThanosDAppMessageType.PermissionRequest;
@@ -88,6 +103,11 @@ export enum ThanosDAppErrorType {
 /**
  * Misc
  */
+
+export type ThanosDAppPermission = {
+  pkh: string;
+  rpc: string;
+} | null;
 
 export type ThanosDAppNetwork =
   | "mainnet"

@@ -8,6 +8,7 @@ import {
   ThanosDAppErrorType,
   ThanosDAppNetwork,
   ThanosDAppMetadata,
+  ThanosDAppPermission,
 } from "./types";
 
 export function isAvailable() {
@@ -55,6 +56,36 @@ export function onAvailabilityChange(callback: (available: boolean) => void) {
   };
   check();
   return () => clearTimeout(t);
+}
+
+export function onPermissionChange(
+  callback: (permission: ThanosDAppPermission) => void
+) {
+  let t: any;
+  let currentPerm: ThanosDAppPermission = null;
+  const check = async () => {
+    try {
+      const perm = await getCurrentPermission();
+      if (!permissionsAreEqual(perm, currentPerm)) {
+        callback(perm);
+        currentPerm = perm;
+      }
+    } catch {}
+
+    t = setTimeout(check, 10_000);
+  };
+  check();
+  return () => clearTimeout(t);
+}
+
+export async function getCurrentPermission() {
+  const res = await request({
+    type: ThanosDAppMessageType.GetCurrentPermissionRequest,
+  });
+  assertResponse(
+    res.type === ThanosDAppMessageType.GetCurrentPermissionResponse
+  );
+  return res.permission;
 }
 
 export async function requestPermission(
@@ -130,6 +161,14 @@ function request(payload: ThanosDAppRequest) {
 
     window.addEventListener("message", handleMessage);
   });
+}
+
+function permissionsAreEqual(
+  aPerm: ThanosDAppPermission,
+  bPerm: ThanosDAppPermission
+) {
+  if (aPerm === null) return bPerm === null;
+  return aPerm.pkh === bPerm?.pkh && aPerm.rpc === bPerm?.rpc;
 }
 
 function createError(payload: any) {

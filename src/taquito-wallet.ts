@@ -12,6 +12,8 @@ import {
 import {
   isAvailable,
   onAvailabilityChange,
+  getCurrentPermission,
+  onPermissionChange,
   requestPermission,
   requestOperation,
   requestSign,
@@ -19,16 +21,26 @@ import {
   ThanosWalletError,
 } from "./client";
 
-import { ThanosDAppNetwork } from "./types";
+import { ThanosDAppNetwork, ThanosDAppPermission } from "./types";
 
 export class ThanosWallet implements WalletProvider {
   static isAvailable = isAvailable;
   static onAvailabilityChange = onAvailabilityChange;
+  static getCurrentPermission = getCurrentPermission;
+  static onPermissionChange = onPermissionChange;
 
   private pkh?: string;
   public rpc?: string;
 
-  constructor(private appName: string) {}
+  constructor(
+    private appName: string,
+    existingPermission?: ThanosDAppPermission
+  ) {
+    if (existingPermission) {
+      this.pkh = existingPermission.pkh;
+      this.rpc = existingPermission.rpc;
+    }
+  }
 
   get connected() {
     return Boolean(this.pkh);
@@ -110,3 +122,5 @@ function formatOpParams(op: any) {
   }
   return rest;
 }
+
+type NonNullable<T> = T extends null ? never : T;
