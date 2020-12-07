@@ -6,6 +6,10 @@
 
 * **ThanosDAppMessageBase**
 
+  ↳ [ThanosDAppGetCurrentPermissionRequest](thanosdappgetcurrentpermissionrequest.md)
+
+  ↳ [ThanosDAppGetCurrentPermissionResponse](thanosdappgetcurrentpermissionresponse.md)
+
   ↳ [ThanosDAppPermissionRequest](thanosdapppermissionrequest.md)
 
   ↳ [ThanosDAppPermissionResponse](thanosdapppermissionresponse.md)
@@ -13,6 +17,14 @@
   ↳ [ThanosDAppOperationRequest](thanosdappoperationrequest.md)
 
   ↳ [ThanosDAppOperationResponse](thanosdappoperationresponse.md)
+
+  ↳ [ThanosDAppSignRequest](thanosdappsignrequest.md)
+
+  ↳ [ThanosDAppSignResponse](thanosdappsignresponse.md)
+
+  ↳ [ThanosDAppBroadcastRequest](thanosdappbroadcastrequest.md)
+
+  ↳ [ThanosDAppBroadcastResponse](thanosdappbroadcastresponse.md)
 
 ## Index
 
@@ -26,4 +38,4 @@
 
 • **type**: *[ThanosDAppMessageType](../enums/thanosdappmessagetype.md)*
 
-*Defined in [types.ts:12](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/types.ts#L12)*
+*Defined in [types.ts:18](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L18)*

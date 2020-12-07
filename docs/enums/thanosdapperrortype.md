@@ -18,7 +18,7 @@ Errors
 
 • **InvalidParams**: = "INVALID_PARAMS"
 
-*Defined in [types.ts:56](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/types.ts#L56)*
+*Defined in [types.ts:100](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L100)*
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 • **NotFound**: = "NOT_FOUND"
 
-*Defined in [types.ts:55](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/types.ts#L55)*
+*Defined in [types.ts:99](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L99)*
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 • **NotGranted**: = "NOT_GRANTED"
 
-*Defined in [types.ts:54](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/types.ts#L54)*
+*Defined in [types.ts:98](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L98)*

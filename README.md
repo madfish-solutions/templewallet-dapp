@@ -52,7 +52,45 @@ import { ThanosWallet } from "@thanos-wallet/dapp";
 })();
 ```
 
+#### Check permissions
+
+```typescript
+import { ThanosWallet } from "@thanos-wallet/dapp";
+
+(async () => {
+  try {
+    const available = await ThanosWallet.isAvailable();
+    if (!available) {
+      throw new Error("Thanos Wallet not installed");
+    }
+
+    const permission = await ThanosWallet.getCurrentPermission();
+    // Alternatively, you can use the method `ThanosWallet.onPermissionChange`
+    // that tracks current permission in real-time.
+
+    console.info(permission);
+    // prints "{ pkh: string, rpc: string }" if permission exists, "null" - if not.
+
+    const wallet = new ThanosWallet("My Super DApp", permission);
+
+    console.info(wallet.connected);
+    // prints "true" if permission exists, "false" - if not.
+
+    if (!wallet.connected) {
+      await wallet.connect("carthagenet");
+    }
+
+    const tezos = wallet.toTezos();
+
+    // ...
+  } catch (err) {
+    console.error(err);
+  }
+})();
+```
+
 ### Demo
+
 You can find the example of Counter DApp in [this repo](https://github.com/madfish-solutions/counter-dapp).
 
 ## API

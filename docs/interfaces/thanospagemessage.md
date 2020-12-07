@@ -20,7 +20,7 @@
 
 • **payload**: *any*
 
-*Defined in [types.ts:71](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/types.ts#L71)*
+*Defined in [types.ts:125](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L125)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **reqId**? : *string | number*
 
-*Defined in [types.ts:72](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/types.ts#L72)*
+*Defined in [types.ts:126](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L126)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **type**: *[ThanosPageMessageType](../enums/thanospagemessagetype.md)*
 
-*Defined in [types.ts:70](https://github.com/madfish-solutions/thanoswallet-dapp/blob/6ebdacd/src/types.ts#L70)*
+*Defined in [types.ts:124](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L124)*
