@@ -63,6 +63,10 @@ export class ThanosWallet implements WalletProvider {
     this.rpc = rpc;
   }
 
+  reconnect(network: ThanosDAppNetwork) {
+    return this.connect(network, { forcePermission: true });
+  }
+
   async getPKH() {
     assertConnected(this.pkh);
     return this.pkh;
