@@ -100,7 +100,11 @@ export async function requestPermission(
     force,
   });
   assertResponse(res.type === ThanosDAppMessageType.PermissionResponse);
-  return { pkh: res.pkh, rpc: res.rpc };
+  return {
+    rpc: res.rpc,
+    pkh: res.pkh,
+    publicKey: res.publicKey,
+  };
 }
 
 export async function requestOperation(sourcePkh: string, opParams: any) {

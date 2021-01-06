@@ -38,4 +38,4 @@
 
 • **type**: *[ThanosDAppMessageType](../enums/thanosdappmessagetype.md)*
 
-*Defined in [types.ts:18](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L18)*
+*Defined in [types.ts:18](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/types.ts#L18)*

@@ -29,38 +29,35 @@ export class ThanosWallet implements WalletProvider {
   static getCurrentPermission = getCurrentPermission;
   static onPermissionChange = onPermissionChange;
 
-  private pkh?: string;
-  public rpc?: string;
+  permission: ThanosDAppPermission = null;
 
   constructor(
     private appName: string,
     existingPermission?: ThanosDAppPermission
   ) {
     if (existingPermission) {
-      this.pkh = existingPermission.pkh;
-      this.rpc = existingPermission.rpc;
+      this.permission = existingPermission;
     }
   }
 
   get connected() {
-    return Boolean(this.pkh);
+    return Boolean(this.permission);
   }
 
   toTezos() {
-    assertConnected(this.pkh);
-    const tezos = new TezosToolkit(this.rpc!);
+    assertConnected(this.permission);
+    const tezos = new TezosToolkit(this.permission.rpc);
     tezos.setProvider({ wallet: this });
     return tezos;
   }
 
   async connect(network: ThanosDAppNetwork, opts = { forcePermission: false }) {
-    const { pkh, rpc } = await requestPermission(
+    const perm = await requestPermission(
       network,
       { name: this.appName },
       opts.forcePermission
     );
-    this.pkh = pkh;
-    this.rpc = rpc;
+    this.permission = perm;
   }
 
   reconnect(network: ThanosDAppNetwork) {
@@ -68,8 +65,8 @@ export class ThanosWallet implements WalletProvider {
   }
 
   async getPKH() {
-    assertConnected(this.pkh);
-    return this.pkh;
+    assertConnected(this.permission);
+    return this.permission.pkh;
   }
 
   async mapTransferParamsToWalletParams(params: WalletTransferParams) {
@@ -85,17 +82,17 @@ export class ThanosWallet implements WalletProvider {
   }
 
   async sendOperations(opParams: any[]) {
-    assertConnected(this.pkh);
-    return requestOperation(this.pkh, opParams.map(formatOpParams));
+    assertConnected(this.permission);
+    return requestOperation(this.permission.pkh, opParams.map(formatOpParams));
   }
 
   async sign(payload: string) {
-    assertConnected(this.pkh);
-    return requestSign(this.pkh, payload);
+    assertConnected(this.permission);
+    return requestSign(this.permission.pkh, payload);
   }
 
   async broadcast(signedOpBytes: string) {
-    assertConnected(this.pkh);
+    assertConnected(this.permission);
     return requestBroadcast(signedOpBytes);
   }
 }
@@ -106,8 +103,8 @@ export class NotConnectedThanosWalletError extends ThanosWalletError {
     "You need to connect ThanosWallet by calling thanosWallet.connect() first";
 }
 
-function assertConnected(pkh?: string): asserts pkh {
-  if (!pkh) {
+function assertConnected(perm: ThanosDAppPermission): asserts perm {
+  if (!perm) {
     throw new NotConnectedThanosWalletError();
   }
 }

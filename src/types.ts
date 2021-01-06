@@ -56,6 +56,7 @@ export interface ThanosDAppPermissionRequest extends ThanosDAppMessageBase {
 export interface ThanosDAppPermissionResponse extends ThanosDAppMessageBase {
   type: ThanosDAppMessageType.PermissionResponse;
   pkh: string;
+  publicKey: string;
   rpc: string;
 }
 
@@ -105,8 +106,9 @@ export enum ThanosDAppErrorType {
  */
 
 export type ThanosDAppPermission = {
-  pkh: string;
   rpc: string;
+  pkh: string;
+  publicKey: string;
 } | null;
 
 export type ThanosDAppNetwork =

@@ -21,7 +21,7 @@
 
 • **permission**: *[ThanosDAppPermission](../README.md#thanosdapppermission)*
 
-*Defined in [types.ts:46](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L46)*
+*Defined in [types.ts:46](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/types.ts#L46)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 *Overrides [ThanosDAppMessageBase](thanosdappmessagebase.md).[type](thanosdappmessagebase.md#type)*
 
-*Defined in [types.ts:45](https://github.com/madfish-solutions/thanoswallet-dapp/blob/f20b824/src/types.ts#L45)*
+*Defined in [types.ts:45](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/types.ts#L45)*
