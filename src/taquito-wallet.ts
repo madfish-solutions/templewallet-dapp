@@ -111,7 +111,12 @@ function assertConnected(perm: ThanosDAppPermission): asserts perm {
 
 function formatOpParams(op: any) {
   const { fee, gas_limit, storage_limit, ...rest } = op;
-  if (op.kind === "transaction") {
+  if (op.kind === "origination") {
+    return {
+      ...rest,
+      mutez: true, // The balance was already converted from Tez (ꜩ) to Mutez (uꜩ)
+    }
+  } else if (op.kind === "transaction") {
     const { destination, amount, parameters, ...txRest } = rest;
     return {
       ...txRest,
