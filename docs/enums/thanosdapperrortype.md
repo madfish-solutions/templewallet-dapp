@@ -11,6 +11,7 @@ Errors
 * [InvalidParams](thanosdapperrortype.md#invalidparams)
 * [NotFound](thanosdapperrortype.md#notfound)
 * [NotGranted](thanosdapperrortype.md#notgranted)
+* [TezosOperation](thanosdapperrortype.md#tezosoperation)
 
 ## Enumeration members
 
@@ -18,7 +19,7 @@ Errors
 
 • **InvalidParams**: = "INVALID_PARAMS"
 
-*Defined in [types.ts:101](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/types.ts#L101)*
+*Defined in [types.ts:101](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/types.ts#L101)*
 
 ___
 
@@ -26,7 +27,7 @@ ___
 
 • **NotFound**: = "NOT_FOUND"
 
-*Defined in [types.ts:100](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/types.ts#L100)*
+*Defined in [types.ts:100](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/types.ts#L100)*
 
 ___
 
@@ -34,4 +35,12 @@ ___
 
 • **NotGranted**: = "NOT_GRANTED"
 
-*Defined in [types.ts:99](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/types.ts#L99)*
+*Defined in [types.ts:99](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/types.ts#L99)*
+
+___
+
+###  TezosOperation
+
+• **TezosOperation**: = "TEZOS_OPERATION"
+
+*Defined in [types.ts:102](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/types.ts#L102)*

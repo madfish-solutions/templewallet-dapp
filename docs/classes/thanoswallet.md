@@ -48,7 +48,7 @@
 
 \+ **new ThanosWallet**(`appName`: string, `existingPermission?`: [ThanosDAppPermission](../README.md#thanosdapppermission)): *[ThanosWallet](thanoswallet.md)*
 
-*Defined in [taquito-wallet.ts:32](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L32)*
+*Defined in [taquito-wallet.ts:32](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L32)*
 
 **Parameters:**
 
@@ -65,7 +65,7 @@ Name | Type |
 
 • **appName**: *string*
 
-*Defined in [taquito-wallet.ts:35](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L35)*
+*Defined in [taquito-wallet.ts:35](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L35)*
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 • **permission**: *[ThanosDAppPermission](../README.md#thanosdapppermission)* = null
 
-*Defined in [taquito-wallet.ts:32](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L32)*
+*Defined in [taquito-wallet.ts:32](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L32)*
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 ▪ **getCurrentPermission**: *[getCurrentPermission](../README.md#getcurrentpermission)* = getCurrentPermission
 
-*Defined in [taquito-wallet.ts:29](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L29)*
+*Defined in [taquito-wallet.ts:29](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L29)*
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 ▪ **isAvailable**: *[isAvailable](../README.md#isavailable)* = isAvailable
 
-*Defined in [taquito-wallet.ts:27](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L27)*
+*Defined in [taquito-wallet.ts:27](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L27)*
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 ▪ **onAvailabilityChange**: *[onAvailabilityChange](../README.md#onavailabilitychange)* = onAvailabilityChange
 
-*Defined in [taquito-wallet.ts:28](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L28)*
+*Defined in [taquito-wallet.ts:28](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L28)*
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 ▪ **onPermissionChange**: *[onPermissionChange](../README.md#onpermissionchange)* = onPermissionChange
 
-*Defined in [taquito-wallet.ts:30](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L30)*
+*Defined in [taquito-wallet.ts:30](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L30)*
 
 ## Accessors
 
@@ -113,7 +113,7 @@ ___
 
 • **get connected**(): *boolean*
 
-*Defined in [taquito-wallet.ts:43](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L43)*
+*Defined in [taquito-wallet.ts:43](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L43)*
 
 **Returns:** *boolean*
 
@@ -123,7 +123,7 @@ ___
 
 ▸ **broadcast**(`signedOpBytes`: string): *Promise‹string›*
 
-*Defined in [taquito-wallet.ts:94](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L94)*
+*Defined in [taquito-wallet.ts:94](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L94)*
 
 **Parameters:**
 
@@ -139,7 +139,7 @@ ___
 
 ▸ **connect**(`network`: [ThanosDAppNetwork](../README.md#thanosdappnetwork), `opts`: object): *Promise‹void›*
 
-*Defined in [taquito-wallet.ts:54](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L54)*
+*Defined in [taquito-wallet.ts:54](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L54)*
 
 **Parameters:**
 
@@ -159,7 +159,7 @@ ___
 
 ▸ **getPKH**(): *Promise‹string›*
 
-*Defined in [taquito-wallet.ts:67](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L67)*
+*Defined in [taquito-wallet.ts:67](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L67)*
 
 **Returns:** *Promise‹string›*
 
@@ -169,7 +169,7 @@ ___
 
 ▸ **mapDelegateParamsToWalletParams**(`params`: WalletDelegateParams): *Promise‹RPCDelegateOperation›*
 
-*Defined in [taquito-wallet.ts:80](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L80)*
+*Defined in [taquito-wallet.ts:80](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L80)*
 
 **Parameters:**
 
@@ -185,7 +185,7 @@ ___
 
 ▸ **mapOriginateParamsToWalletParams**(`params`: WalletOriginateParams): *Promise‹RPCOriginationOperation›*
 
-*Defined in [taquito-wallet.ts:76](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L76)*
+*Defined in [taquito-wallet.ts:76](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L76)*
 
 **Parameters:**
 
@@ -201,7 +201,7 @@ ___
 
 ▸ **mapTransferParamsToWalletParams**(`params`: WalletTransferParams): *Promise‹RPCTransferOperation›*
 
-*Defined in [taquito-wallet.ts:72](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L72)*
+*Defined in [taquito-wallet.ts:72](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L72)*
 
 **Parameters:**
 
@@ -217,7 +217,7 @@ ___
 
 ▸ **reconnect**(`network`: [ThanosDAppNetwork](../README.md#thanosdappnetwork)): *Promise‹void›*
 
-*Defined in [taquito-wallet.ts:63](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L63)*
+*Defined in [taquito-wallet.ts:63](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L63)*
 
 **Parameters:**
 
@@ -233,7 +233,7 @@ ___
 
 ▸ **sendOperations**(`opParams`: any[]): *Promise‹string›*
 
-*Defined in [taquito-wallet.ts:84](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L84)*
+*Defined in [taquito-wallet.ts:84](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L84)*
 
 **Parameters:**
 
@@ -249,7 +249,7 @@ ___
 
 ▸ **sign**(`payload`: string): *Promise‹string›*
 
-*Defined in [taquito-wallet.ts:89](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L89)*
+*Defined in [taquito-wallet.ts:89](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L89)*
 
 **Parameters:**
 
@@ -265,6 +265,6 @@ ___
 
 ▸ **toTezos**(): *TezosToolkit‹›*
 
-*Defined in [taquito-wallet.ts:47](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/taquito-wallet.ts#L47)*
+*Defined in [taquito-wallet.ts:47](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/taquito-wallet.ts#L47)*
 
 **Returns:** *TezosToolkit‹›*
