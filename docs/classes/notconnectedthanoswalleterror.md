@@ -27,7 +27,7 @@
 
 *Overrides [ThanosWalletError](thanoswalleterror.md).[message](thanoswalleterror.md#message)*
 
-*Defined in [taquito-wallet.ts:102](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bdc6bb6/src/taquito-wallet.ts#L102)*
+*Defined in [taquito-wallet.ts:102](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bfb7add/src/taquito-wallet.ts#L102)*
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 *Overrides [ThanosWalletError](thanoswalleterror.md).[name](thanoswalleterror.md#name)*
 
-*Defined in [taquito-wallet.ts:101](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bdc6bb6/src/taquito-wallet.ts#L101)*
+*Defined in [taquito-wallet.ts:101](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bfb7add/src/taquito-wallet.ts#L101)*

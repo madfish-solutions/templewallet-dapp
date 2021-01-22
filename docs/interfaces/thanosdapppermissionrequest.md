@@ -23,7 +23,7 @@
 
 • **appMeta**: *[ThanosDAppMetadata](thanosdappmetadata.md)*
 
-*Defined in [types.ts:52](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bdc6bb6/src/types.ts#L52)*
+*Defined in [types.ts:52](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bfb7add/src/types.ts#L52)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **force**? : *undefined | false | true*
 
-*Defined in [types.ts:53](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bdc6bb6/src/types.ts#L53)*
+*Defined in [types.ts:53](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bfb7add/src/types.ts#L53)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **network**: *[ThanosDAppNetwork](../README.md#thanosdappnetwork)*
 
-*Defined in [types.ts:51](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bdc6bb6/src/types.ts#L51)*
+*Defined in [types.ts:51](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bfb7add/src/types.ts#L51)*
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 *Overrides [ThanosDAppMessageBase](thanosdappmessagebase.md).[type](thanosdappmessagebase.md#type)*
 
-*Defined in [types.ts:50](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bdc6bb6/src/types.ts#L50)*
+*Defined in [types.ts:50](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bfb7add/src/types.ts#L50)*

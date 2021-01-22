@@ -22,7 +22,7 @@
 
 • **opParams**: *any[]*
 
-*Defined in [types.ts:66](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bdc6bb6/src/types.ts#L66)*
+*Defined in [types.ts:66](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bfb7add/src/types.ts#L66)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **sourcePkh**: *string*
 
-*Defined in [types.ts:65](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bdc6bb6/src/types.ts#L65)*
+*Defined in [types.ts:65](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bfb7add/src/types.ts#L65)*
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 *Overrides [ThanosDAppMessageBase](thanosdappmessagebase.md).[type](thanosdappmessagebase.md#type)*
 
-*Defined in [types.ts:64](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bdc6bb6/src/types.ts#L64)*
+*Defined in [types.ts:64](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bfb7add/src/types.ts#L64)*
