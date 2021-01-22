@@ -187,10 +187,10 @@ function createError(payload: any) {
     case payload === ThanosDAppErrorType.InvalidParams:
       return new InvalidParamsThanosWalletError();
 
-    case payload?.type === ThanosDAppErrorType.TezosOperation &&
-      Array.isArray(payload.errors) &&
-      payload.errors.length > 0:
-      return new TezosOperationError(payload.errors);
+    case payload?.[0] === ThanosDAppErrorType.TezosOperation &&
+      Array.isArray(payload[1]) &&
+      payload[1].length > 0:
+      return new TezosOperationError(payload[1]);
 
     case payload?.startsWith("__tezos__"):
       return new Error(payload.replace("__tezos__", ""));
