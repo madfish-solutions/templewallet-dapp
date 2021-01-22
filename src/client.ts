@@ -1,4 +1,5 @@
 import { nanoid } from "nanoid";
+import { TezosOperationError } from "@taquito/taquito";
 import {
   ThanosPageMessageType,
   ThanosPageMessage,
@@ -185,6 +186,11 @@ function createError(payload: any) {
 
     case payload === ThanosDAppErrorType.InvalidParams:
       return new InvalidParamsThanosWalletError();
+
+    case payload?.type === ThanosDAppErrorType.TezosOperation &&
+      Array.isArray(payload.errors) &&
+      payload.errors.length > 0:
+      return new TezosOperationError(payload.errors);
 
     case payload?.startsWith("__tezos__"):
       return new Error(payload.replace("__tezos__", ""));

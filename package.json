@@ -31,13 +31,13 @@
     "nanoid": "^3.1.10"
   },
   "devDependencies": {
-    "@taquito/taquito": "^7.0.0-beta.0",
+    "@taquito/taquito": "^8.0.0-beta.2",
     "microbundle": "^0.12.2",
     "typedoc": "^0.17.8",
     "typedoc-plugin-markdown": "^2.3.1",
     "typescript": "^3.9.6"
   },
   "peerDependencies": {
-    "@taquito/taquito": "^8.0.0 || ^8.0.0-beta.1"
+    "@taquito/taquito": "^7.0.0 || ^7.0.0-beta || ^8.0.0-beta"
   }
 }
