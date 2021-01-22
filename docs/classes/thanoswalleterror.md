@@ -31,7 +31,7 @@
 
 • **message**: *string* = "An unknown error occured. Please try again or report it"
 
-*Defined in [client.ts:215](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/client.ts#L215)*
+*Defined in [client.ts:215](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bdc6bb6/src/client.ts#L215)*
 
 ___
 
@@ -39,4 +39,4 @@ ___
 
 • **name**: *string* = "ThanosWalletError"
 
-*Defined in [client.ts:214](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/client.ts#L214)*
+*Defined in [client.ts:214](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bdc6bb6/src/client.ts#L214)*

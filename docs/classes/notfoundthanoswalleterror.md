@@ -27,7 +27,7 @@
 
 *Overrides [ThanosWalletError](thanoswalleterror.md).[message](thanoswalleterror.md#message)*
 
-*Defined in [client.ts:225](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/client.ts#L225)*
+*Defined in [client.ts:225](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bdc6bb6/src/client.ts#L225)*
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 *Overrides [ThanosWalletError](thanoswalleterror.md).[name](thanoswalleterror.md#name)*
 
-*Defined in [client.ts:224](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/client.ts#L224)*
+*Defined in [client.ts:224](https://github.com/madfish-solutions/thanoswallet-dapp/blob/bdc6bb6/src/client.ts#L224)*
