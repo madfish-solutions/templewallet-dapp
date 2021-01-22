@@ -24,4 +24,4 @@ Messages
 
 *Overrides [ThanosDAppMessageBase](thanosdappmessagebase.md).[type](thanosdappmessagebase.md#type)*
 
-*Defined in [types.ts:40](https://github.com/madfish-solutions/thanoswallet-dapp/blob/1e90ae9/src/types.ts#L40)*
+*Defined in [types.ts:40](https://github.com/madfish-solutions/thanoswallet-dapp/blob/5043365/src/types.ts#L40)*
