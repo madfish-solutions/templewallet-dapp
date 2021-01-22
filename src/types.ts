@@ -99,6 +99,7 @@ export enum ThanosDAppErrorType {
   NotGranted = "NOT_GRANTED",
   NotFound = "NOT_FOUND",
   InvalidParams = "INVALID_PARAMS",
+  TezosOperation = "TEZOS_OPERATION",
 }
 
 /**
