@@ -1,24 +1,24 @@
-export type ThanosDAppMessage = ThanosDAppRequest | ThanosDAppResponse;
+export type TempleDAppMessage = TempleDAppRequest | TempleDAppResponse;
 
-export type ThanosDAppRequest =
-  | ThanosDAppGetCurrentPermissionRequest
-  | ThanosDAppPermissionRequest
-  | ThanosDAppOperationRequest
-  | ThanosDAppSignRequest
-  | ThanosDAppBroadcastRequest;
+export type TempleDAppRequest =
+  | TempleDAppGetCurrentPermissionRequest
+  | TempleDAppPermissionRequest
+  | TempleDAppOperationRequest
+  | TempleDAppSignRequest
+  | TempleDAppBroadcastRequest;
 
-export type ThanosDAppResponse =
-  | ThanosDAppGetCurrentPermissionResponse
-  | ThanosDAppPermissionResponse
-  | ThanosDAppOperationResponse
-  | ThanosDAppSignResponse
-  | ThanosDAppBroadcastResponse;
+export type TempleDAppResponse =
+  | TempleDAppGetCurrentPermissionResponse
+  | TempleDAppPermissionResponse
+  | TempleDAppOperationResponse
+  | TempleDAppSignResponse
+  | TempleDAppBroadcastResponse;
 
-export interface ThanosDAppMessageBase {
-  type: ThanosDAppMessageType;
+export interface TempleDAppMessageBase {
+  type: TempleDAppMessageType;
 }
 
-export enum ThanosDAppMessageType {
+export enum TempleDAppMessageType {
   GetCurrentPermissionRequest = "GET_CURRENT_PERMISSION_REQUEST",
   GetCurrentPermissionResponse = "GET_CURRENT_PERMISSION_RESPONSE",
   PermissionRequest = "PERMISSION_REQUEST",
@@ -35,67 +35,67 @@ export enum ThanosDAppMessageType {
  * Messages
  */
 
-export interface ThanosDAppGetCurrentPermissionRequest
-  extends ThanosDAppMessageBase {
-  type: ThanosDAppMessageType.GetCurrentPermissionRequest;
+export interface TempleDAppGetCurrentPermissionRequest
+  extends TempleDAppMessageBase {
+  type: TempleDAppMessageType.GetCurrentPermissionRequest;
 }
 
-export interface ThanosDAppGetCurrentPermissionResponse
-  extends ThanosDAppMessageBase {
-  type: ThanosDAppMessageType.GetCurrentPermissionResponse;
-  permission: ThanosDAppPermission;
+export interface TempleDAppGetCurrentPermissionResponse
+  extends TempleDAppMessageBase {
+  type: TempleDAppMessageType.GetCurrentPermissionResponse;
+  permission: TempleDAppPermission;
 }
 
-export interface ThanosDAppPermissionRequest extends ThanosDAppMessageBase {
-  type: ThanosDAppMessageType.PermissionRequest;
-  network: ThanosDAppNetwork;
-  appMeta: ThanosDAppMetadata;
+export interface TempleDAppPermissionRequest extends TempleDAppMessageBase {
+  type: TempleDAppMessageType.PermissionRequest;
+  network: TempleDAppNetwork;
+  appMeta: TempleDAppMetadata;
   force?: boolean;
 }
 
-export interface ThanosDAppPermissionResponse extends ThanosDAppMessageBase {
-  type: ThanosDAppMessageType.PermissionResponse;
+export interface TempleDAppPermissionResponse extends TempleDAppMessageBase {
+  type: TempleDAppMessageType.PermissionResponse;
   pkh: string;
   publicKey: string;
   rpc: string;
 }
 
-export interface ThanosDAppOperationRequest extends ThanosDAppMessageBase {
-  type: ThanosDAppMessageType.OperationRequest;
+export interface TempleDAppOperationRequest extends TempleDAppMessageBase {
+  type: TempleDAppMessageType.OperationRequest;
   sourcePkh: string;
   opParams: any[];
 }
 
-export interface ThanosDAppOperationResponse extends ThanosDAppMessageBase {
-  type: ThanosDAppMessageType.OperationResponse;
+export interface TempleDAppOperationResponse extends TempleDAppMessageBase {
+  type: TempleDAppMessageType.OperationResponse;
   opHash: string;
 }
 
-export interface ThanosDAppSignRequest extends ThanosDAppMessageBase {
-  type: ThanosDAppMessageType.SignRequest;
+export interface TempleDAppSignRequest extends TempleDAppMessageBase {
+  type: TempleDAppMessageType.SignRequest;
   sourcePkh: string;
   payload: string;
 }
 
-export interface ThanosDAppSignResponse extends ThanosDAppMessageBase {
-  type: ThanosDAppMessageType.SignResponse;
+export interface TempleDAppSignResponse extends TempleDAppMessageBase {
+  type: TempleDAppMessageType.SignResponse;
   signature: string;
 }
 
-export interface ThanosDAppBroadcastRequest extends ThanosDAppMessageBase {
-  type: ThanosDAppMessageType.BroadcastRequest;
+export interface TempleDAppBroadcastRequest extends TempleDAppMessageBase {
+  type: TempleDAppMessageType.BroadcastRequest;
   signedOpBytes: string;
 }
 
-export interface ThanosDAppBroadcastResponse extends ThanosDAppMessageBase {
-  type: ThanosDAppMessageType.BroadcastResponse;
+export interface TempleDAppBroadcastResponse extends TempleDAppMessageBase {
+  type: TempleDAppMessageType.BroadcastResponse;
   opHash: string;
 }
 
 /**
  * Errors
  */
-export enum ThanosDAppErrorType {
+export enum TempleDAppErrorType {
   NotGranted = "NOT_GRANTED",
   NotFound = "NOT_FOUND",
   InvalidParams = "INVALID_PARAMS",
@@ -106,31 +106,31 @@ export enum ThanosDAppErrorType {
  * Misc
  */
 
-export type ThanosDAppPermission = {
+export type TempleDAppPermission = {
   rpc: string;
   pkh: string;
   publicKey: string;
 } | null;
 
-export type ThanosDAppNetwork =
+export type TempleDAppNetwork =
   | "mainnet"
   | "delphinet"
   | "carthagenet"
   | "sandbox"
   | { name: string; rpc: string };
 
-export interface ThanosDAppMetadata {
+export interface TempleDAppMetadata {
   name: string;
 }
 
-export interface ThanosPageMessage {
-  type: ThanosPageMessageType;
+export interface TemplePageMessage {
+  type: TemplePageMessageType;
   payload: any;
   reqId?: string | number;
 }
 
-export enum ThanosPageMessageType {
-  Request = "THANOS_PAGE_REQUEST",
-  Response = "THANOS_PAGE_RESPONSE",
-  ErrorResponse = "THANOS_PAGE_ERROR_RESPONSE",
+export enum TemplePageMessageType {
+  Request = "TEMPLE_PAGE_REQUEST",
+  Response = "TEMPLE_PAGE_RESPONSE",
+  ErrorResponse = "TEMPLE_PAGE_ERROR_RESPONSE",
 }

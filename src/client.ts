@@ -1,15 +1,15 @@
 import { nanoid } from "nanoid";
 import { TezosOperationError } from "@taquito/taquito";
 import {
-  ThanosPageMessageType,
-  ThanosPageMessage,
-  ThanosDAppMessageType,
-  ThanosDAppRequest,
-  ThanosDAppResponse,
-  ThanosDAppErrorType,
-  ThanosDAppNetwork,
-  ThanosDAppMetadata,
-  ThanosDAppPermission,
+  TemplePageMessageType,
+  TemplePageMessage,
+  TempleDAppMessageType,
+  TempleDAppRequest,
+  TempleDAppResponse,
+  TempleDAppErrorType,
+  TempleDAppNetwork,
+  TempleDAppMetadata,
+  TempleDAppPermission,
 } from "./types";
 
 export function isAvailable() {
@@ -17,7 +17,7 @@ export function isAvailable() {
     const handleMessage = (evt: MessageEvent) => {
       if (
         evt.source === window &&
-        evt.data?.type === ThanosPageMessageType.Response &&
+        evt.data?.type === TemplePageMessageType.Response &&
         evt.data?.payload === "PONG"
       ) {
         done(true);
@@ -31,7 +31,7 @@ export function isAvailable() {
     };
 
     send({
-      type: ThanosPageMessageType.Request,
+      type: TemplePageMessageType.Request,
       payload: "PING",
     });
     window.addEventListener("message", handleMessage);
@@ -60,10 +60,10 @@ export function onAvailabilityChange(callback: (available: boolean) => void) {
 }
 
 export function onPermissionChange(
-  callback: (permission: ThanosDAppPermission) => void
+  callback: (permission: TempleDAppPermission) => void
 ) {
   let t: any;
-  let currentPerm: ThanosDAppPermission = null;
+  let currentPerm: TempleDAppPermission = null;
   const check = async () => {
     try {
       const perm = await getCurrentPermission();
@@ -81,26 +81,26 @@ export function onPermissionChange(
 
 export async function getCurrentPermission() {
   const res = await request({
-    type: ThanosDAppMessageType.GetCurrentPermissionRequest,
+    type: TempleDAppMessageType.GetCurrentPermissionRequest,
   });
   assertResponse(
-    res.type === ThanosDAppMessageType.GetCurrentPermissionResponse
+    res.type === TempleDAppMessageType.GetCurrentPermissionResponse
   );
   return res.permission;
 }
 
 export async function requestPermission(
-  network: ThanosDAppNetwork,
-  appMeta: ThanosDAppMetadata,
+  network: TempleDAppNetwork,
+  appMeta: TempleDAppMetadata,
   force: boolean
 ) {
   const res = await request({
-    type: ThanosDAppMessageType.PermissionRequest,
+    type: TempleDAppMessageType.PermissionRequest,
     network,
     appMeta,
     force,
   });
-  assertResponse(res.type === ThanosDAppMessageType.PermissionResponse);
+  assertResponse(res.type === TempleDAppMessageType.PermissionResponse);
   return {
     rpc: res.rpc,
     pkh: res.pkh,
@@ -110,48 +110,48 @@ export async function requestPermission(
 
 export async function requestOperation(sourcePkh: string, opParams: any) {
   const res = await request({
-    type: ThanosDAppMessageType.OperationRequest,
+    type: TempleDAppMessageType.OperationRequest,
     sourcePkh,
     opParams,
   });
-  assertResponse(res.type === ThanosDAppMessageType.OperationResponse);
+  assertResponse(res.type === TempleDAppMessageType.OperationResponse);
   return res.opHash;
 }
 
 export async function requestSign(sourcePkh: string, payload: string) {
   const res = await request({
-    type: ThanosDAppMessageType.SignRequest,
+    type: TempleDAppMessageType.SignRequest,
     sourcePkh,
     payload,
   });
-  assertResponse(res.type === ThanosDAppMessageType.SignResponse);
+  assertResponse(res.type === TempleDAppMessageType.SignResponse);
   return res.signature;
 }
 
 export async function requestBroadcast(signedOpBytes: string) {
   const res = await request({
-    type: ThanosDAppMessageType.BroadcastRequest,
+    type: TempleDAppMessageType.BroadcastRequest,
     signedOpBytes,
   });
-  assertResponse(res.type === ThanosDAppMessageType.BroadcastResponse);
+  assertResponse(res.type === TempleDAppMessageType.BroadcastResponse);
   return res.opHash;
 }
 
-function request(payload: ThanosDAppRequest) {
-  return new Promise<ThanosDAppResponse>((resolve, reject) => {
+function request(payload: TempleDAppRequest) {
+  return new Promise<TempleDAppResponse>((resolve, reject) => {
     const reqId = nanoid();
     const handleMessage = (evt: MessageEvent) => {
-      const res = evt.data as ThanosPageMessage;
+      const res = evt.data as TemplePageMessage;
       switch (true) {
         case evt.source !== window || res?.reqId !== reqId:
           return;
 
-        case res?.type === ThanosPageMessageType.Response:
+        case res?.type === TemplePageMessageType.Response:
           resolve(res.payload);
           window.removeEventListener("message", handleMessage);
           break;
 
-        case res?.type === ThanosPageMessageType.ErrorResponse:
+        case res?.type === TemplePageMessageType.ErrorResponse:
           reject(createError(res.payload));
           window.removeEventListener("message", handleMessage);
           break;
@@ -159,7 +159,7 @@ function request(payload: ThanosDAppRequest) {
     };
 
     send({
-      type: ThanosPageMessageType.Request,
+      type: TemplePageMessageType.Request,
       payload,
       reqId,
     });
@@ -169,8 +169,8 @@ function request(payload: ThanosDAppRequest) {
 }
 
 function permissionsAreEqual(
-  aPerm: ThanosDAppPermission,
-  bPerm: ThanosDAppPermission
+  aPerm: TempleDAppPermission,
+  bPerm: TempleDAppPermission
 ) {
   if (aPerm === null) return bPerm === null;
   return aPerm.pkh === bPerm?.pkh && aPerm.rpc === bPerm?.rpc;
@@ -178,17 +178,17 @@ function permissionsAreEqual(
 
 function createError(payload: any) {
   switch (true) {
-    case payload === ThanosDAppErrorType.NotGranted:
-      return new NotGrantedThanosWalletError();
+    case payload === TempleDAppErrorType.NotGranted:
+      return new NotGrantedTempleWalletError();
 
-    case payload === ThanosDAppErrorType.NotFound:
-      return new NotFoundThanosWalletError();
+    case payload === TempleDAppErrorType.NotFound:
+      return new NotFoundTempleWalletError();
 
-    case payload === ThanosDAppErrorType.InvalidParams:
-      return new InvalidParamsThanosWalletError();
+    case payload === TempleDAppErrorType.InvalidParams:
+      return new InvalidParamsTempleWalletError();
 
     case Array.isArray(payload) &&
-      payload[0] === ThanosDAppErrorType.TezosOperation &&
+      payload[0] === TempleDAppErrorType.TezosOperation &&
       Array.isArray(payload[1]) &&
       payload[1].length > 0:
       return new TezosOperationError(payload[1]);
@@ -197,7 +197,7 @@ function createError(payload: any) {
       return new Error(payload.replace("__tezos__", ""));
 
     default:
-      return new ThanosWalletError();
+      return new TempleWalletError();
   }
 }
 
@@ -207,26 +207,26 @@ function assertResponse(condition: any): asserts condition {
   }
 }
 
-function send(msg: ThanosPageMessage) {
+function send(msg: TemplePageMessage) {
   window.postMessage(msg, "*");
 }
 
-export class ThanosWalletError implements Error {
-  name = "ThanosWalletError";
+export class TempleWalletError implements Error {
+  name = "TempleWalletError";
   message = "An unknown error occured. Please try again or report it";
 }
 
-export class NotGrantedThanosWalletError extends ThanosWalletError {
-  name = "NotGrantedThanosWalletError";
+export class NotGrantedTempleWalletError extends TempleWalletError {
+  name = "NotGrantedTempleWalletError";
   message = "Permission Not Granted";
 }
 
-export class NotFoundThanosWalletError extends ThanosWalletError {
-  name = "NotFoundThanosWalletError";
+export class NotFoundTempleWalletError extends TempleWalletError {
+  name = "NotFoundTempleWalletError";
   message = "Account Not Found. Try connect again";
 }
 
-export class InvalidParamsThanosWalletError extends ThanosWalletError {
-  name = "InvalidParamsThanosWalletError";
+export class InvalidParamsTempleWalletError extends TempleWalletError {
+  name = "InvalidParamsTempleWalletError";
   message = "Some of the parameters you provided are invalid";
 }

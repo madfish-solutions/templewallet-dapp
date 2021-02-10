@@ -18,22 +18,22 @@ import {
   requestOperation,
   requestSign,
   requestBroadcast,
-  ThanosWalletError,
+  TempleWalletError,
 } from "./client";
 
-import { ThanosDAppNetwork, ThanosDAppPermission } from "./types";
+import { TempleDAppNetwork, TempleDAppPermission } from "./types";
 
-export class ThanosWallet implements WalletProvider {
+export class TempleWallet implements WalletProvider {
   static isAvailable = isAvailable;
   static onAvailabilityChange = onAvailabilityChange;
   static getCurrentPermission = getCurrentPermission;
   static onPermissionChange = onPermissionChange;
 
-  permission: ThanosDAppPermission = null;
+  permission: TempleDAppPermission = null;
 
   constructor(
     private appName: string,
-    existingPermission?: ThanosDAppPermission
+    existingPermission?: TempleDAppPermission
   ) {
     if (existingPermission) {
       this.permission = existingPermission;
@@ -51,7 +51,7 @@ export class ThanosWallet implements WalletProvider {
     return tezos;
   }
 
-  async connect(network: ThanosDAppNetwork, opts = { forcePermission: false }) {
+  async connect(network: TempleDAppNetwork, opts = { forcePermission: false }) {
     const perm = await requestPermission(
       network,
       { name: this.appName },
@@ -60,7 +60,7 @@ export class ThanosWallet implements WalletProvider {
     this.permission = perm;
   }
 
-  reconnect(network: ThanosDAppNetwork) {
+  reconnect(network: TempleDAppNetwork) {
     return this.connect(network, { forcePermission: true });
   }
 
@@ -97,15 +97,15 @@ export class ThanosWallet implements WalletProvider {
   }
 }
 
-export class NotConnectedThanosWalletError extends ThanosWalletError {
-  name = "ThanosWalletNotConnected";
+export class NotConnectedTempleWalletError extends TempleWalletError {
+  name = "TempleWalletNotConnected";
   message =
-    "You need to connect ThanosWallet by calling thanosWallet.connect() first";
+    "You need to connect TempleWallet by calling templeWallet.connect() first";
 }
 
-function assertConnected(perm: ThanosDAppPermission): asserts perm {
+function assertConnected(perm: TempleDAppPermission): asserts perm {
   if (!perm) {
-    throw new NotConnectedThanosWalletError();
+    throw new NotConnectedTempleWalletError();
   }
 }
 

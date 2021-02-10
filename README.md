@@ -1,35 +1,35 @@
-# ThanosWallet DApp Module
+# TempleWallet DApp Module
 
-This module is required to provide communication between DApps and Thanos Wallet, it exposes unified interface for this interaction.
+This module is required to provide communication between DApps and Temple Wallet, it exposes unified interface for this interaction.
 
 ## 🚀 Quick Start
 
 ### Install
 
 ```bash
-yarn add @taquito/taquito @thanos-wallet/dapp
+yarn add @taquito/taquito @temple-wallet/dapp
 ```
 
 ### Usage
 
 ```typescript
-import { ThanosWallet } from "@thanos-wallet/dapp";
+import { TempleWallet } from "@temple-wallet/dapp";
 
 (async () => {
   try {
-    const available = await ThanosWallet.isAvailable();
+    const available = await TempleWallet.isAvailable();
     if (!available) {
-      throw new Error("Thanos Wallet not installed");
+      throw new Error("Temple Wallet not installed");
     }
 
     // Note:
 
-    // use `ThanosWallet.isAvailable` method only after web application fully loaded.
+    // use `TempleWallet.isAvailable` method only after web application fully loaded.
 
-    // Alternatively, you can use the method `ThanosWallet.onAvailabilityChange`
+    // Alternatively, you can use the method `TempleWallet.onAvailabilityChange`
     // that tracks availability in real-time .
 
-    const wallet = new ThanosWallet("My Super DApp");
+    const wallet = new TempleWallet("My Super DApp");
     await wallet.connect("carthagenet");
     const tezos = wallet.toTezos();
 
@@ -55,23 +55,23 @@ import { ThanosWallet } from "@thanos-wallet/dapp";
 #### Check permissions
 
 ```typescript
-import { ThanosWallet } from "@thanos-wallet/dapp";
+import { TempleWallet } from "@temple-wallet/dapp";
 
 (async () => {
   try {
-    const available = await ThanosWallet.isAvailable();
+    const available = await TempleWallet.isAvailable();
     if (!available) {
-      throw new Error("Thanos Wallet not installed");
+      throw new Error("Temple Wallet not installed");
     }
 
-    const permission = await ThanosWallet.getCurrentPermission();
-    // Alternatively, you can use the method `ThanosWallet.onPermissionChange`
+    const permission = await TempleWallet.getCurrentPermission();
+    // Alternatively, you can use the method `TempleWallet.onPermissionChange`
     // that tracks current permission in real-time.
 
     console.info(permission);
     // prints "{ rpc: string, pkh: string, publicKey: string }" if permission exists, "null" - if not.
 
-    const wallet = new ThanosWallet("My Super DApp", permission);
+    const wallet = new TempleWallet("My Super DApp", permission);
 
     console.info(wallet.connected);
     // prints "true" if permission exists, "false" - if not.
@@ -97,7 +97,7 @@ You can find the example of Counter DApp in [this repo](https://github.com/madfi
 
 You can explore auto generated [full API Docs here](docs/README.md).
 
-Probably you would be most interested in the [ThanosWallet class](docs/classes/thanoswallet.md) methods.
+Probably you would be most interested in the [TempleWallet class](docs/classes/templewallet.md) methods.
 
 ## Local Development
 
