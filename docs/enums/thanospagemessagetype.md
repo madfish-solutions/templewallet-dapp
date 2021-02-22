@@ -16,7 +16,7 @@
 
 • **ErrorResponse**: = "THANOS_PAGE_ERROR_RESPONSE"
 
-*Defined in [types.ts:135](https://github.com/madfish-solutions/thanoswallet-dapp/blob/8b5bfb8/src/types.ts#L135)*
+*Defined in [types.ts:136](https://github.com/madfish-solutions/thanoswallet-dapp/blob/442d5c3/src/types.ts#L136)*
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 • **Request**: = "THANOS_PAGE_REQUEST"
 
-*Defined in [types.ts:133](https://github.com/madfish-solutions/thanoswallet-dapp/blob/8b5bfb8/src/types.ts#L133)*
+*Defined in [types.ts:134](https://github.com/madfish-solutions/thanoswallet-dapp/blob/442d5c3/src/types.ts#L134)*
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 • **Response**: = "THANOS_PAGE_RESPONSE"
 
-*Defined in [types.ts:134](https://github.com/madfish-solutions/thanoswallet-dapp/blob/8b5bfb8/src/types.ts#L134)*
+*Defined in [types.ts:135](https://github.com/madfish-solutions/thanoswallet-dapp/blob/442d5c3/src/types.ts#L135)*

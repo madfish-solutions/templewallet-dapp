@@ -115,6 +115,7 @@ export type ThanosDAppPermission = {
 export type ThanosDAppNetwork =
   | "mainnet"
   | "delphinet"
+  | "edo2net"
   | "carthagenet"
   | "sandbox"
   | { name: string; rpc: string };
