@@ -114,6 +114,7 @@ export type TempleDAppPermission = {
 
 export type TempleDAppNetwork =
   | "mainnet"
+  | "edo2net"
   | "delphinet"
   | "carthagenet"
   | "sandbox"
