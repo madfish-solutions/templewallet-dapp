@@ -21,7 +21,7 @@
 
 • **signature**: *string*
 
-*Defined in [types.ts:82](https://github.com/madfish-solutions/thanoswallet-dapp/blob/7b4ea2b/src/types.ts#L82)*
+*Defined in [types.ts:82](https://github.com/madfish-solutions/templewallet-dapp/blob/0a08b44/src/types.ts#L82)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 *Overrides [TempleDAppMessageBase](templedappmessagebase.md).[type](templedappmessagebase.md#type)*
 
-*Defined in [types.ts:81](https://github.com/madfish-solutions/thanoswallet-dapp/blob/7b4ea2b/src/types.ts#L81)*
+*Defined in [types.ts:81](https://github.com/madfish-solutions/templewallet-dapp/blob/0a08b44/src/types.ts#L81)*
