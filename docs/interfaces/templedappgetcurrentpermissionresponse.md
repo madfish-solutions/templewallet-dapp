@@ -21,7 +21,7 @@
 
 • **permission**: *[TempleDAppPermission](../README.md#templedapppermission)*
 
-*Defined in [types.ts:46](https://github.com/madfish-solutions/thanoswallet-dapp/blob/d3a40a5/src/types.ts#L46)*
+*Defined in [types.ts:46](https://github.com/madfish-solutions/thanoswallet-dapp/blob/7b4ea2b/src/types.ts#L46)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 *Overrides [TempleDAppMessageBase](templedappmessagebase.md).[type](templedappmessagebase.md#type)*
 
-*Defined in [types.ts:45](https://github.com/madfish-solutions/thanoswallet-dapp/blob/d3a40a5/src/types.ts#L45)*
+*Defined in [types.ts:45](https://github.com/madfish-solutions/thanoswallet-dapp/blob/7b4ea2b/src/types.ts#L45)*

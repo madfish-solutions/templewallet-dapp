@@ -31,7 +31,7 @@
 
 • **message**: *string* = "An unknown error occured. Please try again or report it"
 
-*Defined in [client.ts:216](https://github.com/madfish-solutions/thanoswallet-dapp/blob/d3a40a5/src/client.ts#L216)*
+*Defined in [client.ts:216](https://github.com/madfish-solutions/thanoswallet-dapp/blob/7b4ea2b/src/client.ts#L216)*
 
 ___
 
@@ -39,4 +39,4 @@ ___
 
 • **name**: *string* = "TempleWalletError"
 
-*Defined in [client.ts:215](https://github.com/madfish-solutions/thanoswallet-dapp/blob/d3a40a5/src/client.ts#L215)*
+*Defined in [client.ts:215](https://github.com/madfish-solutions/thanoswallet-dapp/blob/7b4ea2b/src/client.ts#L215)*

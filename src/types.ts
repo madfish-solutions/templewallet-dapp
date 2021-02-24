@@ -116,6 +116,7 @@ export type TempleDAppNetwork =
   | "mainnet"
   | "edo2net"
   | "delphinet"
+  | "edo2net"
   | "carthagenet"
   | "sandbox"
   | { name: string; rpc: string };

@@ -21,7 +21,7 @@
 
 • **signedOpBytes**: *string*
 
-*Defined in [types.ts:87](https://github.com/madfish-solutions/thanoswallet-dapp/blob/d3a40a5/src/types.ts#L87)*
+*Defined in [types.ts:87](https://github.com/madfish-solutions/thanoswallet-dapp/blob/7b4ea2b/src/types.ts#L87)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 *Overrides [TempleDAppMessageBase](templedappmessagebase.md).[type](templedappmessagebase.md#type)*
 
-*Defined in [types.ts:86](https://github.com/madfish-solutions/thanoswallet-dapp/blob/d3a40a5/src/types.ts#L86)*
+*Defined in [types.ts:86](https://github.com/madfish-solutions/thanoswallet-dapp/blob/7b4ea2b/src/types.ts#L86)*
