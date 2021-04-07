@@ -89,6 +89,26 @@ import { TempleWallet } from "@temple-wallet/dapp";
 })();
 ```
 
+#### Sign
+
+```typescript
+import { TempleWallet } from "@temple-wallet/dapp";
+
+(async () => {
+  try {
+    const wallet = new TempleWallet("My Super DApp");
+    // ...
+
+    // Only hex strings
+    const signature = await wallet.sign(
+      Buffer.from("Hello world").toString("hex")
+    );
+  } catch (err) {
+    console.error(err);
+  }
+})();
+```
+
 ### Demo
 
 You can find the example of Counter DApp in [this repo](https://github.com/madfish-solutions/counter-dapp).
