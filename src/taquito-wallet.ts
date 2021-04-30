@@ -117,6 +117,7 @@ function formatOpParams(op: any) {
       return {
         ...rest,
         mutez: true, // The balance was already converted from Tez (ꜩ) to Mutez (uꜩ)
+        storageLimit: storage_limit,
       };
 
     case "transaction":
@@ -127,9 +128,13 @@ function formatOpParams(op: any) {
         amount: +amount,
         mutez: true,
         parameter: parameters,
+        storageLimit: storage_limit,
       };
 
     default:
-      return rest;
+      return {
+        ...rest,
+        storageLimit: storage_limit,
+      };
   }
 }
