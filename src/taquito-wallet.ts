@@ -5,8 +5,8 @@ import {
   createSetDelegateOperation,
   createTransferOperation,
   WalletDelegateParams,
-  WalletOriginateParams,
   WalletTransferParams,
+  WalletOriginateParams,
 } from "@taquito/taquito";
 
 import {
@@ -70,15 +70,24 @@ export class TempleWallet implements WalletProvider {
   }
 
   async mapTransferParamsToWalletParams(params: WalletTransferParams) {
-    return createTransferOperation(params);
+    return this.removeDefaultParams(
+      params,
+      await createTransferOperation(this.formatParameters(params))
+    );
   }
 
   async mapOriginateParamsToWalletParams(params: WalletOriginateParams) {
-    return createOriginationOperation(params as any);
+    return this.removeDefaultParams(
+      params,
+      await createOriginationOperation(this.formatParameters(params))
+    );
   }
 
   async mapDelegateParamsToWalletParams(params: WalletDelegateParams) {
-    return createSetDelegateOperation(params as any);
+    return this.removeDefaultParams(
+      params,
+      await createSetDelegateOperation(this.formatParameters(params))
+    );
   }
 
   async sendOperations(opParams: any[]) {
@@ -94,6 +103,38 @@ export class TempleWallet implements WalletProvider {
   async broadcast(signedOpBytes: string) {
     assertConnected(this.permission);
     return requestBroadcast(signedOpBytes);
+  }
+
+  private formatParameters(params: any) {
+    if (params.fee) {
+      params.fee = params.fee.toString();
+    }
+    if (params.storageLimit) {
+      params.storageLimit = params.storageLimit.toString();
+    }
+    if (params.gasLimit) {
+      params.gasLimit = params.gasLimit.toString();
+    }
+    return params;
+  }
+
+  private removeDefaultParams(
+    params: WalletTransferParams | WalletOriginateParams | WalletDelegateParams,
+    operatedParams: any
+  ) {
+    // If fee, storageLimit or gasLimit is undefined by user
+    // in case of beacon wallet, dont override it by
+    // defaults.
+    if (!params.fee) {
+      delete operatedParams.fee;
+    }
+    if (!params.storageLimit) {
+      delete operatedParams.storage_limit;
+    }
+    if (!params.gasLimit) {
+      delete operatedParams.gas_limit;
+    }
+    return operatedParams;
   }
 }
 
@@ -117,6 +158,8 @@ function formatOpParams(op: any) {
       return {
         ...rest,
         mutez: true, // The balance was already converted from Tez (ꜩ) to Mutez (uꜩ)
+        fee,
+        gasLimit: gas_limit,
         storageLimit: storage_limit,
       };
 
@@ -128,12 +171,16 @@ function formatOpParams(op: any) {
         amount: +amount,
         mutez: true,
         parameter: parameters,
+        fee,
+        gasLimit: gas_limit,
         storageLimit: storage_limit,
       };
 
     default:
       return {
         ...rest,
+        fee,
+        gasLimit: gas_limit,
         storageLimit: storage_limit,
       };
   }
