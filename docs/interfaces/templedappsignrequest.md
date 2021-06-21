@@ -22,7 +22,7 @@
 
 • **payload**: *string*
 
-*Defined in [types.ts:77](https://github.com/madfish-solutions/templewallet-dapp/blob/91ad23c/src/types.ts#L77)*
+*Defined in [types.ts:77](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/types.ts#L77)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **sourcePkh**: *string*
 
-*Defined in [types.ts:76](https://github.com/madfish-solutions/templewallet-dapp/blob/91ad23c/src/types.ts#L76)*
+*Defined in [types.ts:76](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/types.ts#L76)*
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 *Overrides [TempleDAppMessageBase](templedappmessagebase.md).[type](templedappmessagebase.md#type)*
 
-*Defined in [types.ts:75](https://github.com/madfish-solutions/templewallet-dapp/blob/91ad23c/src/types.ts#L75)*
+*Defined in [types.ts:75](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/types.ts#L75)*

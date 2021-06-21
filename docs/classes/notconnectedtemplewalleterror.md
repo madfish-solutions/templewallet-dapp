@@ -27,7 +27,7 @@
 
 *Overrides [TempleWalletError](templewalleterror.md).[message](templewalleterror.md#message)*
 
-*Defined in [taquito-wallet.ts:102](https://github.com/madfish-solutions/templewallet-dapp/blob/91ad23c/src/taquito-wallet.ts#L102)*
+*Defined in [taquito-wallet.ts:143](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/taquito-wallet.ts#L143)*
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 *Overrides [TempleWalletError](templewalleterror.md).[name](templewalleterror.md#name)*
 
-*Defined in [taquito-wallet.ts:101](https://github.com/madfish-solutions/templewallet-dapp/blob/91ad23c/src/taquito-wallet.ts#L101)*
+*Defined in [taquito-wallet.ts:142](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/taquito-wallet.ts#L142)*

@@ -24,4 +24,4 @@ Messages
 
 *Overrides [TempleDAppMessageBase](templedappmessagebase.md).[type](templedappmessagebase.md#type)*
 
-*Defined in [types.ts:40](https://github.com/madfish-solutions/templewallet-dapp/blob/91ad23c/src/types.ts#L40)*
+*Defined in [types.ts:40](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/types.ts#L40)*

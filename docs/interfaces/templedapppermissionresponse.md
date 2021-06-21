@@ -23,7 +23,7 @@
 
 • **pkh**: *string*
 
-*Defined in [types.ts:58](https://github.com/madfish-solutions/templewallet-dapp/blob/91ad23c/src/types.ts#L58)*
+*Defined in [types.ts:58](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/types.ts#L58)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **publicKey**: *string*
 
-*Defined in [types.ts:59](https://github.com/madfish-solutions/templewallet-dapp/blob/91ad23c/src/types.ts#L59)*
+*Defined in [types.ts:59](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/types.ts#L59)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **rpc**: *string*
 
-*Defined in [types.ts:60](https://github.com/madfish-solutions/templewallet-dapp/blob/91ad23c/src/types.ts#L60)*
+*Defined in [types.ts:60](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/types.ts#L60)*
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 *Overrides [TempleDAppMessageBase](templedappmessagebase.md).[type](templedappmessagebase.md#type)*
 
-*Defined in [types.ts:57](https://github.com/madfish-solutions/templewallet-dapp/blob/91ad23c/src/types.ts#L57)*
+*Defined in [types.ts:57](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/types.ts#L57)*
