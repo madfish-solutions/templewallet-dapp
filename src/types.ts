@@ -116,6 +116,7 @@ export type TempleDAppNetwork =
   | "mainnet"
   | "edo2net"
   | "florencenet"
+  | "granadanet"
   | "sandbox"
   | { name: string; rpc: string };
 
