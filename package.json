@@ -28,10 +28,10 @@
     "doc": "typedoc --plugin typedoc-plugin-markdown --mode file --readme none"
   },
   "dependencies": {
-    "nanoid": "^3.1.10"
+    "nanoid": "^3.1.25"
   },
   "devDependencies": {
-    "@taquito/taquito": "^9.1.1",
+    "@taquito/taquito": "^9.2.0",
     "microbundle": "^0.12.2",
     "typedoc": "^0.17.8",
     "typedoc-plugin-markdown": "^2.3.1",
