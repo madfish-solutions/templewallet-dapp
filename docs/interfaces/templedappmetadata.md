@@ -18,4 +18,4 @@
 
 • **name**: *string*
 
-*Defined in [types.ts:123](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/types.ts#L123)*
+*Defined in [types.ts:124](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/types.ts#L124)*

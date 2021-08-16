@@ -67,15 +67,15 @@
 
 Ƭ **TempleDAppMessage**: *[TempleDAppRequest](README.md#templedapprequest) | [TempleDAppResponse](README.md#templedappresponse)*
 
-*Defined in [types.ts:1](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/types.ts#L1)*
+*Defined in [types.ts:1](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/types.ts#L1)*
 
 ___
 
 ###  TempleDAppNetwork
 
-Ƭ **TempleDAppNetwork**: *"mainnet" | "edo2net" | "florencenet" | "sandbox" | object*
+Ƭ **TempleDAppNetwork**: *"mainnet" | "edo2net" | "florencenet" | "granadanet" | "sandbox" | object*
 
-*Defined in [types.ts:115](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/types.ts#L115)*
+*Defined in [types.ts:115](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/types.ts#L115)*
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 Ƭ **TempleDAppPermission**: *object | null*
 
-*Defined in [types.ts:109](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/types.ts#L109)*
+*Defined in [types.ts:109](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/types.ts#L109)*
 
 Misc
 
@@ -93,7 +93,7 @@ ___
 
 Ƭ **TempleDAppRequest**: *[TempleDAppGetCurrentPermissionRequest](interfaces/templedappgetcurrentpermissionrequest.md) | [TempleDAppPermissionRequest](interfaces/templedapppermissionrequest.md) | [TempleDAppOperationRequest](interfaces/templedappoperationrequest.md) | [TempleDAppSignRequest](interfaces/templedappsignrequest.md) | [TempleDAppBroadcastRequest](interfaces/templedappbroadcastrequest.md)*
 
-*Defined in [types.ts:3](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/types.ts#L3)*
+*Defined in [types.ts:3](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/types.ts#L3)*
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 Ƭ **TempleDAppResponse**: *[TempleDAppGetCurrentPermissionResponse](interfaces/templedappgetcurrentpermissionresponse.md) | [TempleDAppPermissionResponse](interfaces/templedapppermissionresponse.md) | [TempleDAppOperationResponse](interfaces/templedappoperationresponse.md) | [TempleDAppSignResponse](interfaces/templedappsignresponse.md) | [TempleDAppBroadcastResponse](interfaces/templedappbroadcastresponse.md)*
 
-*Defined in [types.ts:10](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/types.ts#L10)*
+*Defined in [types.ts:10](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/types.ts#L10)*
 
 ## Functions
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **assertConnected**(`perm`: [TempleDAppPermission](README.md#templedapppermission)): *asserts perm*
 
-*Defined in [taquito-wallet.ts:147](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/taquito-wallet.ts#L147)*
+*Defined in [taquito-wallet.ts:147](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L147)*
 
 **Parameters:**
 
@@ -125,7 +125,7 @@ ___
 
 ▸ **assertResponse**(`condition`: any): *asserts condition*
 
-*Defined in [client.ts:204](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/client.ts#L204)*
+*Defined in [client.ts:204](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/client.ts#L204)*
 
 **Parameters:**
 
@@ -141,7 +141,7 @@ ___
 
 ▸ **createError**(`payload`: any): *[TempleWalletError](classes/templewalleterror.md)‹› | TezosOperationError‹›*
 
-*Defined in [client.ts:179](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/client.ts#L179)*
+*Defined in [client.ts:179](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/client.ts#L179)*
 
 **Parameters:**
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **formatOpParams**(`op`: any): *any*
 
-*Defined in [taquito-wallet.ts:153](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/taquito-wallet.ts#L153)*
+*Defined in [taquito-wallet.ts:153](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L153)*
 
 **Parameters:**
 
@@ -173,7 +173,7 @@ ___
 
 ▸ **getCurrentPermission**(): *Promise‹null | object›*
 
-*Defined in [client.ts:82](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/client.ts#L82)*
+*Defined in [client.ts:82](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/client.ts#L82)*
 
 **Returns:** *Promise‹null | object›*
 
@@ -183,7 +183,7 @@ ___
 
 ▸ **isAvailable**(): *Promise‹boolean›*
 
-*Defined in [client.ts:15](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/client.ts#L15)*
+*Defined in [client.ts:15](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/client.ts#L15)*
 
 **Returns:** *Promise‹boolean›*
 
@@ -193,7 +193,7 @@ ___
 
 ▸ **onAvailabilityChange**(`callback`: function): *(Anonymous function)*
 
-*Defined in [client.ts:42](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/client.ts#L42)*
+*Defined in [client.ts:42](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/client.ts#L42)*
 
 **Parameters:**
 
@@ -215,7 +215,7 @@ ___
 
 ▸ **onPermissionChange**(`callback`: function): *(Anonymous function)*
 
-*Defined in [client.ts:62](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/client.ts#L62)*
+*Defined in [client.ts:62](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/client.ts#L62)*
 
 **Parameters:**
 
@@ -237,7 +237,7 @@ ___
 
 ▸ **permissionsAreEqual**(`aPerm`: [TempleDAppPermission](README.md#templedapppermission), `bPerm`: [TempleDAppPermission](README.md#templedapppermission)): *boolean*
 
-*Defined in [client.ts:171](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/client.ts#L171)*
+*Defined in [client.ts:171](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/client.ts#L171)*
 
 **Parameters:**
 
@@ -254,7 +254,7 @@ ___
 
 ▸ **request**(`payload`: [TempleDAppRequest](README.md#templedapprequest)): *Promise‹[TempleDAppGetCurrentPermissionResponse](interfaces/templedappgetcurrentpermissionresponse.md) | [TempleDAppPermissionResponse](interfaces/templedapppermissionresponse.md) | [TempleDAppOperationResponse](interfaces/templedappoperationresponse.md) | [TempleDAppSignResponse](interfaces/templedappsignresponse.md) | [TempleDAppBroadcastResponse](interfaces/templedappbroadcastresponse.md)›*
 
-*Defined in [client.ts:140](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/client.ts#L140)*
+*Defined in [client.ts:140](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/client.ts#L140)*
 
 **Parameters:**
 
@@ -270,7 +270,7 @@ ___
 
 ▸ **requestBroadcast**(`signedOpBytes`: string): *Promise‹string›*
 
-*Defined in [client.ts:131](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/client.ts#L131)*
+*Defined in [client.ts:131](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/client.ts#L131)*
 
 **Parameters:**
 
@@ -286,7 +286,7 @@ ___
 
 ▸ **requestOperation**(`sourcePkh`: string, `opParams`: any): *Promise‹string›*
 
-*Defined in [client.ts:111](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/client.ts#L111)*
+*Defined in [client.ts:111](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/client.ts#L111)*
 
 **Parameters:**
 
@@ -303,7 +303,7 @@ ___
 
 ▸ **requestPermission**(`network`: [TempleDAppNetwork](README.md#templedappnetwork), `appMeta`: [TempleDAppMetadata](interfaces/templedappmetadata.md), `force`: boolean): *Promise‹object›*
 
-*Defined in [client.ts:92](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/client.ts#L92)*
+*Defined in [client.ts:92](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/client.ts#L92)*
 
 **Parameters:**
 
@@ -321,7 +321,7 @@ ___
 
 ▸ **requestSign**(`sourcePkh`: string, `payload`: string): *Promise‹string›*
 
-*Defined in [client.ts:121](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/client.ts#L121)*
+*Defined in [client.ts:121](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/client.ts#L121)*
 
 **Parameters:**
 
@@ -338,7 +338,7 @@ ___
 
 ▸ **send**(`msg`: [TemplePageMessage](interfaces/templepagemessage.md)): *void*
 
-*Defined in [client.ts:210](https://github.com/madfish-solutions/templewallet-dapp/blob/e5aeb37/src/client.ts#L210)*
+*Defined in [client.ts:210](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/client.ts#L210)*
 
 **Parameters:**
 
