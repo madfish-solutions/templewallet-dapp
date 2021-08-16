@@ -50,7 +50,7 @@
 
 \+ **new TempleWallet**(`appName`: string, `existingPermission?`: [TempleDAppPermission](../README.md#templedapppermission)): *[TempleWallet](templewallet.md)*
 
-*Defined in [taquito-wallet.ts:32](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L32)*
+*Defined in [taquito-wallet.ts:32](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L32)*
 
 **Parameters:**
 
@@ -67,7 +67,7 @@ Name | Type |
 
 • **appName**: *string*
 
-*Defined in [taquito-wallet.ts:35](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L35)*
+*Defined in [taquito-wallet.ts:35](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L35)*
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 • **permission**: *[TempleDAppPermission](../README.md#templedapppermission)* = null
 
-*Defined in [taquito-wallet.ts:32](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L32)*
+*Defined in [taquito-wallet.ts:32](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L32)*
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 ▪ **getCurrentPermission**: *[getCurrentPermission](../README.md#getcurrentpermission)* = getCurrentPermission
 
-*Defined in [taquito-wallet.ts:29](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L29)*
+*Defined in [taquito-wallet.ts:29](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L29)*
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 ▪ **isAvailable**: *[isAvailable](../README.md#isavailable)* = isAvailable
 
-*Defined in [taquito-wallet.ts:27](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L27)*
+*Defined in [taquito-wallet.ts:27](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L27)*
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 ▪ **onAvailabilityChange**: *[onAvailabilityChange](../README.md#onavailabilitychange)* = onAvailabilityChange
 
-*Defined in [taquito-wallet.ts:28](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L28)*
+*Defined in [taquito-wallet.ts:28](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L28)*
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 ▪ **onPermissionChange**: *[onPermissionChange](../README.md#onpermissionchange)* = onPermissionChange
 
-*Defined in [taquito-wallet.ts:30](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L30)*
+*Defined in [taquito-wallet.ts:30](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L30)*
 
 ## Accessors
 
@@ -115,7 +115,7 @@ ___
 
 • **get connected**(): *boolean*
 
-*Defined in [taquito-wallet.ts:43](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L43)*
+*Defined in [taquito-wallet.ts:43](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L43)*
 
 **Returns:** *boolean*
 
@@ -125,7 +125,7 @@ ___
 
 ▸ **broadcast**(`signedOpBytes`: string): *Promise‹string›*
 
-*Defined in [taquito-wallet.ts:103](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L103)*
+*Defined in [taquito-wallet.ts:109](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L109)*
 
 **Parameters:**
 
@@ -141,7 +141,7 @@ ___
 
 ▸ **connect**(`network`: [TempleDAppNetwork](../README.md#templedappnetwork), `opts`: object): *Promise‹void›*
 
-*Defined in [taquito-wallet.ts:54](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L54)*
+*Defined in [taquito-wallet.ts:54](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L54)*
 
 **Parameters:**
 
@@ -161,7 +161,7 @@ ___
 
 ▸ **formatParameters**(`params`: any): *any*
 
-*Defined in [taquito-wallet.ts:108](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L108)*
+*Defined in [taquito-wallet.ts:114](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L114)*
 
 **Parameters:**
 
@@ -177,7 +177,7 @@ ___
 
 ▸ **getPKH**(): *Promise‹string›*
 
-*Defined in [taquito-wallet.ts:67](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L67)*
+*Defined in [taquito-wallet.ts:67](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L67)*
 
 **Returns:** *Promise‹string›*
 
@@ -185,15 +185,15 @@ ___
 
 ###  mapDelegateParamsToWalletParams
 
-▸ **mapDelegateParamsToWalletParams**(`params`: WalletDelegateParams): *Promise‹any›*
+▸ **mapDelegateParamsToWalletParams**(`params`: function): *Promise‹any›*
 
-*Defined in [taquito-wallet.ts:86](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L86)*
+*Defined in [taquito-wallet.ts:90](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L90)*
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`params` | WalletDelegateParams |
+▪ **params**: *function*
+
+▸ (): *Promise‹WalletDelegateParams›*
 
 **Returns:** *Promise‹any›*
 
@@ -201,15 +201,15 @@ ___
 
 ###  mapOriginateParamsToWalletParams
 
-▸ **mapOriginateParamsToWalletParams**(`params`: WalletOriginateParams): *Promise‹any›*
+▸ **mapOriginateParamsToWalletParams**(`params`: function): *Promise‹any›*
 
-*Defined in [taquito-wallet.ts:79](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L79)*
+*Defined in [taquito-wallet.ts:81](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L81)*
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`params` | WalletOriginateParams |
+▪ **params**: *function*
+
+▸ (): *Promise‹WalletOriginateParams›*
 
 **Returns:** *Promise‹any›*
 
@@ -217,15 +217,15 @@ ___
 
 ###  mapTransferParamsToWalletParams
 
-▸ **mapTransferParamsToWalletParams**(`params`: WalletTransferParams): *Promise‹any›*
+▸ **mapTransferParamsToWalletParams**(`params`: function): *Promise‹any›*
 
-*Defined in [taquito-wallet.ts:72](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L72)*
+*Defined in [taquito-wallet.ts:72](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L72)*
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`params` | WalletTransferParams |
+▪ **params**: *function*
+
+▸ (): *Promise‹WalletTransferParams›*
 
 **Returns:** *Promise‹any›*
 
@@ -235,7 +235,7 @@ ___
 
 ▸ **reconnect**(`network`: [TempleDAppNetwork](../README.md#templedappnetwork)): *Promise‹void›*
 
-*Defined in [taquito-wallet.ts:63](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L63)*
+*Defined in [taquito-wallet.ts:63](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L63)*
 
 **Parameters:**
 
@@ -251,7 +251,7 @@ ___
 
 ▸ **removeDefaultParams**(`params`: WalletTransferParams | WalletOriginateParams | WalletDelegateParams, `operatedParams`: any): *any*
 
-*Defined in [taquito-wallet.ts:121](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L121)*
+*Defined in [taquito-wallet.ts:127](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L127)*
 
 **Parameters:**
 
@@ -268,7 +268,7 @@ ___
 
 ▸ **sendOperations**(`opParams`: any[]): *Promise‹string›*
 
-*Defined in [taquito-wallet.ts:93](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L93)*
+*Defined in [taquito-wallet.ts:99](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L99)*
 
 **Parameters:**
 
@@ -284,7 +284,7 @@ ___
 
 ▸ **sign**(`payload`: string): *Promise‹string›*
 
-*Defined in [taquito-wallet.ts:98](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L98)*
+*Defined in [taquito-wallet.ts:104](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L104)*
 
 **Parameters:**
 
@@ -300,6 +300,6 @@ ___
 
 ▸ **toTezos**(): *TezosToolkit‹›*
 
-*Defined in [taquito-wallet.ts:47](https://github.com/madfish-solutions/templewallet-dapp/blob/735929f/src/taquito-wallet.ts#L47)*
+*Defined in [taquito-wallet.ts:47](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/taquito-wallet.ts#L47)*
 
 **Returns:** *TezosToolkit‹›*

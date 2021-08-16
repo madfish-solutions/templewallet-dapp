@@ -69,23 +69,29 @@ export class TempleWallet implements WalletProvider {
     return this.permission.pkh;
   }
 
-  async mapTransferParamsToWalletParams(params: WalletTransferParams) {
+  async mapTransferParamsToWalletParams(
+    params: () => Promise<WalletTransferParams>
+  ) {
     return this.removeDefaultParams(
-      params,
+      await params(),
       await createTransferOperation(this.formatParameters(params))
     );
   }
 
-  async mapOriginateParamsToWalletParams(params: WalletOriginateParams) {
+  async mapOriginateParamsToWalletParams(
+    params: () => Promise<WalletOriginateParams>
+  ) {
     return this.removeDefaultParams(
-      params,
+      await params(),
       await createOriginationOperation(this.formatParameters(params))
     );
   }
 
-  async mapDelegateParamsToWalletParams(params: WalletDelegateParams) {
+  async mapDelegateParamsToWalletParams(
+    params: () => Promise<WalletDelegateParams>
+  ) {
     return this.removeDefaultParams(
-      params,
+      await params(),
       await createSetDelegateOperation(this.formatParameters(params))
     );
   }
