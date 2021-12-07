@@ -21,7 +21,7 @@
 
 • **signedOpBytes**: *string*
 
-*Defined in [types.ts:87](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/types.ts#L87)*
+*Defined in [types.ts:87](https://github.com/madfish-solutions/templewallet-dapp/blob/90de0a9/src/types.ts#L87)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 *Overrides [TempleDAppMessageBase](templedappmessagebase.md).[type](templedappmessagebase.md#type)*
 
-*Defined in [types.ts:86](https://github.com/madfish-solutions/templewallet-dapp/blob/da1b569/src/types.ts#L86)*
+*Defined in [types.ts:86](https://github.com/madfish-solutions/templewallet-dapp/blob/90de0a9/src/types.ts#L86)*
