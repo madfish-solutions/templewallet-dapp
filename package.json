@@ -28,17 +28,17 @@
     "doc": "typedoc --plugin typedoc-plugin-markdown --mode file --readme none"
   },
   "dependencies": {
-    "nanoid": "^3.1.25"
+    "nanoid": "^3.1.30"
   },
   "devDependencies": {
-    "@taquito/taquito": "^10.1.0-beta",
+    "@taquito/taquito": "^11.0.2",
     "microbundle": "^0.12.2",
     "typedoc": "^0.17.8",
     "typedoc-plugin-markdown": "^2.3.1",
     "typescript": "^4.3.4"
   },
   "peerDependencies": {
-    "@taquito/taquito": "^10.0.0"
+    "@taquito/taquito": "^11.0.2"
   },
   "publishConfig": {
     "access": "public"
