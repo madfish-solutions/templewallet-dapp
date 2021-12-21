@@ -21,7 +21,7 @@
 
 • **opHash**: *string*
 
-*Defined in [types.ts:92](https://github.com/madfish-solutions/templewallet-dapp/blob/90de0a9/src/types.ts#L92)*
+*Defined in [types.ts:92](https://github.com/madfish-solutions/templewallet-dapp/blob/2603df0/src/types.ts#L92)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 *Overrides [TempleDAppMessageBase](templedappmessagebase.md).[type](templedappmessagebase.md#type)*
 
-*Defined in [types.ts:91](https://github.com/madfish-solutions/templewallet-dapp/blob/90de0a9/src/types.ts#L91)*
+*Defined in [types.ts:91](https://github.com/madfish-solutions/templewallet-dapp/blob/2603df0/src/types.ts#L91)*

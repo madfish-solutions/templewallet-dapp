@@ -20,7 +20,7 @@
 
 • **payload**: *any*
 
-*Defined in [types.ts:129](https://github.com/madfish-solutions/templewallet-dapp/blob/90de0a9/src/types.ts#L129)*
+*Defined in [types.ts:131](https://github.com/madfish-solutions/templewallet-dapp/blob/2603df0/src/types.ts#L131)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **reqId**? : *string | number*
 
-*Defined in [types.ts:130](https://github.com/madfish-solutions/templewallet-dapp/blob/90de0a9/src/types.ts#L130)*
+*Defined in [types.ts:132](https://github.com/madfish-solutions/templewallet-dapp/blob/2603df0/src/types.ts#L132)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **type**: *[TemplePageMessageType](../enums/templepagemessagetype.md)*
 
-*Defined in [types.ts:128](https://github.com/madfish-solutions/templewallet-dapp/blob/90de0a9/src/types.ts#L128)*
+*Defined in [types.ts:130](https://github.com/madfish-solutions/templewallet-dapp/blob/2603df0/src/types.ts#L130)*

@@ -38,4 +38,4 @@
 
 • **type**: *[TempleDAppMessageType](../enums/templedappmessagetype.md)*
 
-*Defined in [types.ts:18](https://github.com/madfish-solutions/templewallet-dapp/blob/90de0a9/src/types.ts#L18)*
+*Defined in [types.ts:18](https://github.com/madfish-solutions/templewallet-dapp/blob/2603df0/src/types.ts#L18)*
