@@ -114,6 +114,7 @@ export type TempleDAppPermission = {
 
 export type TempleDAppNetwork =
   | "mainnet"
+  | "ithacanet"
   | "hangzhounet"
   | "idiazabalnet"
   | "granadanet"

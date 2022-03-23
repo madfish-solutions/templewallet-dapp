@@ -27,7 +27,7 @@
 
 *Overrides [TempleWalletError](templewalleterror.md).[message](templewalleterror.md#message)*
 
-*Defined in [client.ts:226](https://github.com/madfish-solutions/templewallet-dapp/blob/2603df0/src/client.ts#L226)*
+*Defined in [client.ts:226](https://github.com/madfish-solutions/templewallet-dapp/blob/885b4fe/src/client.ts#L226)*
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 *Overrides [TempleWalletError](templewalleterror.md).[name](templewalleterror.md#name)*
 
-*Defined in [client.ts:225](https://github.com/madfish-solutions/templewallet-dapp/blob/2603df0/src/client.ts#L225)*
+*Defined in [client.ts:225](https://github.com/madfish-solutions/templewallet-dapp/blob/885b4fe/src/client.ts#L225)*

@@ -16,7 +16,7 @@
 
 • **ErrorResponse**: = "TEMPLE_PAGE_ERROR_RESPONSE"
 
-*Defined in [types.ts:138](https://github.com/madfish-solutions/templewallet-dapp/blob/2603df0/src/types.ts#L138)*
+*Defined in [types.ts:139](https://github.com/madfish-solutions/templewallet-dapp/blob/885b4fe/src/types.ts#L139)*
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 • **Request**: = "TEMPLE_PAGE_REQUEST"
 
-*Defined in [types.ts:136](https://github.com/madfish-solutions/templewallet-dapp/blob/2603df0/src/types.ts#L136)*
+*Defined in [types.ts:137](https://github.com/madfish-solutions/templewallet-dapp/blob/885b4fe/src/types.ts#L137)*
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 • **Response**: = "TEMPLE_PAGE_RESPONSE"
 
-*Defined in [types.ts:137](https://github.com/madfish-solutions/templewallet-dapp/blob/2603df0/src/types.ts#L137)*
+*Defined in [types.ts:138](https://github.com/madfish-solutions/templewallet-dapp/blob/885b4fe/src/types.ts#L138)*
