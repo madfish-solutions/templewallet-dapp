@@ -31,7 +31,7 @@
 
 • **message**: *string* = "An unknown error occured. Please try again or report it"
 
-*Defined in [client.ts:216](https://github.com/madfish-solutions/templewallet-dapp/blob/885b4fe/src/client.ts#L216)*
+*Defined in [client.ts:216](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L216)*
 
 ___
 
@@ -39,4 +39,4 @@ ___
 
 • **name**: *string* = "TempleWalletError"
 
-*Defined in [client.ts:215](https://github.com/madfish-solutions/templewallet-dapp/blob/885b4fe/src/client.ts#L215)*
+*Defined in [client.ts:215](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L215)*
