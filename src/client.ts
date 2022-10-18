@@ -1,15 +1,8 @@
-import { nanoid } from "nanoid";
 import { TezosOperationError } from "@taquito/taquito";
+import { nanoid } from "nanoid";
 import {
-  TemplePageMessageType,
-  TemplePageMessage,
-  TempleDAppMessageType,
-  TempleDAppRequest,
-  TempleDAppResponse,
-  TempleDAppErrorType,
-  TempleDAppNetwork,
-  TempleDAppMetadata,
-  TempleDAppPermission,
+  TempleDAppErrorType, TempleDAppGetCurrentPermissionResponse, TempleDAppMessageType, TempleDAppMetadata, TempleDAppNetwork, TempleDAppPermission, TempleDAppPermissionResponse, TempleDAppRequest,
+  TempleDAppResponse, TemplePageMessage, TemplePageMessageType
 } from "./types";
 
 export function isAvailable() {
@@ -71,7 +64,7 @@ export function onPermissionChange(
         callback(perm);
         currentPerm = perm;
       }
-    } catch {}
+    } catch { }
 
     t = setTimeout(check, 10_000);
   };
@@ -79,8 +72,8 @@ export function onPermissionChange(
   return () => clearTimeout(t);
 }
 
-export async function getCurrentPermission() {
-  const res = await request({
+export async function getCurrentPermission(): Promise<TempleDAppPermission> {
+  const res: TempleDAppGetCurrentPermissionResponse = await request({
     type: TempleDAppMessageType.GetCurrentPermissionRequest,
   });
   assertResponse(
@@ -101,10 +94,14 @@ export async function requestPermission(
     force,
   });
   assertResponse(res.type === TempleDAppMessageType.PermissionResponse);
+
+  //FIXME TODO in V2 do not manage V3 message yet
+  const v2Message = res as TempleDAppPermissionResponse;
+
   return {
-    rpc: res.rpc,
-    pkh: res.pkh,
-    publicKey: res.publicKey,
+    rpc: v2Message.rpc,
+    pkh: v2Message.pkh,
+    publicKey: v2Message.publicKey,
   };
 }
 
@@ -137,7 +134,7 @@ export async function requestBroadcast(signedOpBytes: string) {
   return res.opHash;
 }
 
-function request(payload: TempleDAppRequest) {
+function request(payload: TempleDAppRequest): any {
   return new Promise<TempleDAppResponse>((resolve, reject) => {
     const reqId = nanoid();
     const handleMessage = (evt: MessageEvent) => {
