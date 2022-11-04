@@ -1,3 +1,21 @@
+export interface AppMetadata extends TempleDAppMetadata {
+  senderId: string;
+  icon?: string;
+};
+
+export interface BlockchainMessage extends TempleDAppMessageBase {
+  blockchainIdentifier: string;
+  type: unknown;
+  blockchainData: unknown;
+}
+
+export interface BeaconMessageWrapper<T extends TempleDAppMessageBase> {
+  id: string // ID of the message. The same ID is used in the request and response
+  version: string
+  senderId: string // ID of the sender. This is used to identify the
+  message: T
+}
+
 export type TempleDAppMessage = TempleDAppRequest | TempleDAppResponse;
 
 export type TempleDAppRequest =
@@ -7,23 +25,33 @@ export type TempleDAppRequest =
   | TempleDAppSignRequest
   | TempleDAppBroadcastRequest;
 
+export type TempleDAppRequestV3 =
+  | BeaconMessageWrapper<TempleDAppPermissionRequestV3>
+  | BeaconMessageWrapper<TempleDAppBlockchainRequestV3>;
+
 export type TempleDAppResponse =
   | TempleDAppGetCurrentPermissionResponse
   | TempleDAppPermissionResponse
   | TempleDAppOperationResponse
   | TempleDAppSignResponse
-  | TempleDAppBroadcastResponse;
+  | TempleDAppBroadcastResponse
+
+export type TempleDAppResponseV3 =
+  | BeaconMessageWrapper<TempleDAppPermissionResponseV3>
+  | BeaconMessageWrapper<TempleDAppBlockchainResponseV3>;
 
 export interface TempleDAppMessageBase {
-  type: TempleDAppMessageType;
+  type: unknown;
 }
 
 export enum TempleDAppMessageType {
   GetCurrentPermissionRequest = "GET_CURRENT_PERMISSION_REQUEST",
   GetCurrentPermissionResponse = "GET_CURRENT_PERMISSION_RESPONSE",
-  PermissionRequest = "PERMISSION_REQUEST",
+  PermissionRequest = "permission_request",
   PermissionResponse = "PERMISSION_RESPONSE",
   OperationRequest = "OPERATION_REQUEST",
+  BlockchainRequest = "blockchain_request",
+  BlockchainResponse = "blockchain_response",
   OperationResponse = "OPERATION_RESPONSE",
   SignRequest = "SIGN_REQUEST",
   SignResponse = "SIGN_RESPONSE",
@@ -53,6 +81,15 @@ export interface TempleDAppPermissionRequest extends TempleDAppMessageBase {
   force?: boolean;
 }
 
+export interface TempleDAppPermissionRequestV3 extends BlockchainMessage {
+  type: TempleDAppMessageType.PermissionRequest;
+  blockchainData: {
+    appMetadata: AppMetadata;
+    scopes: string[];
+    network: TempleDAppNetwork;
+  };
+}
+
 export interface TempleDAppPermissionResponse extends TempleDAppMessageBase {
   type: TempleDAppMessageType.PermissionResponse;
   pkh: string;
@@ -60,10 +97,43 @@ export interface TempleDAppPermissionResponse extends TempleDAppMessageBase {
   rpc: string;
 }
 
+export interface TempleDAppPermissionResponseV3 extends BlockchainMessage {
+  type: TempleDAppMessageType.PermissionResponse;
+  blockchainData: {
+    appMetadata: AppMetadata;
+    scopes: string[];
+  };
+}
+
 export interface TempleDAppOperationRequest extends TempleDAppMessageBase {
   type: TempleDAppMessageType.OperationRequest;
   sourcePkh: string;
   opParams: any[];
+}
+
+export interface TempleDAppBlockchainRequestV3 extends BlockchainMessage {
+  type: TempleDAppMessageType.BlockchainRequest;
+  blockchainData: {
+    type: TempleDAppMessageType.OperationRequest;
+    scope: string;
+    sourceAddress: string;
+    amount: string;
+    recipient: string;
+    mode: 'submit' | 'submit-and-return' | 'return';
+    ticketer: string;
+    data: string;
+    options: {
+      nonce?: number;
+      level?: number;
+    }
+  };
+}
+
+export interface TempleDAppBlockchainResponseV3 extends TempleDAppMessageBase {
+  type: TempleDAppMessageType.BlockchainResponse;
+  transactionHash: string;
+  signature?: string;
+  payload?: string;
 }
 
 export interface TempleDAppOperationResponse extends TempleDAppMessageBase {
@@ -100,6 +170,7 @@ export enum TempleDAppErrorType {
   NotFound = "NOT_FOUND",
   InvalidParams = "INVALID_PARAMS",
   TezosOperation = "TEZOS_OPERATION",
+  BlockchainOperation = "BLOCKCHAIN_OPERATION",
 }
 
 /**
@@ -112,16 +183,7 @@ export type TempleDAppPermission = {
   publicKey: string;
 } | null;
 
-export type TempleDAppNetwork =
-  | "mainnet"
-  | "ithacanet"
-  | "hangzhounet"
-  | "idiazabalnet"
-  | "granadanet"
-  | "edo2net"
-  | "florencenet"
-  | "sandbox"
-  | { name: string; rpc: string };
+export type TempleDAppNetwork = { name: string; rpcUrl: string; type?: string };
 
 export interface TempleDAppMetadata {
   name: string;
