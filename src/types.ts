@@ -120,6 +120,9 @@ export type TempleDAppNetwork =
   | "granadanet"
   | "edo2net"
   | "florencenet"
+  | "mumbainet"
+  | "nairobinet"
+  | "ghostnet"
   | "sandbox"
   | { name: string; rpc: string };
 

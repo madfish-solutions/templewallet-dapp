@@ -4,9 +4,11 @@ import {
   createOriginationOperation,
   createSetDelegateOperation,
   createTransferOperation,
+  createIncreasePaidStorageOperation,
   WalletDelegateParams,
   WalletTransferParams,
   WalletOriginateParams,
+  WalletIncreasePaidStorageParams,
 } from "@taquito/taquito";
 
 import {
@@ -96,6 +98,18 @@ export class TempleWallet implements WalletProvider {
     return this.removeDefaultParams(
       walletParams,
       await createSetDelegateOperation(this.formatParameters(walletParams))
+    );
+  }
+
+  async mapIncreasePaidStorageWalletParams(
+    params: () => Promise<WalletIncreasePaidStorageParams>
+  ) {
+    const walletParams = await params();
+    return this.removeDefaultParams(
+      walletParams,
+      await createIncreasePaidStorageOperation(
+        this.formatParameters(walletParams)
+      )
     );
   }
 
