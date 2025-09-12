@@ -115,13 +115,8 @@ export type TempleDAppPermission = {
 export type TempleDAppNetwork =
   | "mainnet"
   | "ithacanet"
-  | "hangzhounet"
-  | "idiazabalnet"
-  | "granadanet"
-  | "edo2net"
-  | "florencenet"
-  | "mumbainet"
-  | "nairobinet"
+  | "rionet"
+  | "seoulnet"
   | "ghostnet"
   | "sandbox"
   | { name: string; rpc: string };
