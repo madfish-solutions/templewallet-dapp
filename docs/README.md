@@ -73,7 +73,7 @@ ___
 
 ###  TempleDAppNetwork
 
-Ƭ **TempleDAppNetwork**: * "mainnet" | "ithacanet" | "rionet" | "seoulnet" | "ghostnet" | "sandbox" | object*
+Ƭ **TempleDAppNetwork**: * "mainnet" | "ithacanet" | "rionet" | "seoulnet" | "ghostnet" | "shadownet" | "sandbox" | object*
 
 *Defined in [types.ts:115](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/types.ts#L115)*
 
