@@ -119,6 +119,7 @@ export type TempleDAppNetwork =
   | "seoulnet"
   | "ghostnet"
   | "shadownet"
+  | "tezlink"
   | "sandbox"
   | { name: string; rpc: string };
 
