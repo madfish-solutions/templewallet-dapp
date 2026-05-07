@@ -121,6 +121,7 @@ export type TempleDAppNetwork =
   | "shadownet"
   | "tezlink"
   | "sandbox"
+  | "tezosx"
   | { name: string; rpc: string };
 
 export interface TempleDAppMetadata {
