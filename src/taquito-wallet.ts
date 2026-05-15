@@ -71,6 +71,11 @@ export class TempleWallet implements WalletProvider {
     return this.permission.pkh;
   }
 
+  async getPK() {
+    assertConnected(this.permission);
+    return this.permission.publicKey;
+  }
+
   async mapTransferParamsToWalletParams(
     params: () => Promise<WalletTransferParams>
   ) {
